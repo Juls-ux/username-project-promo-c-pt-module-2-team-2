@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+    margin-bottom: 45px;
+    border-top: solid 0.8px;
+
+    &__adacheap {
+        font-size: 14px;
+        color: #707070;
+    }
+
+    &__logo-adalab {
+        width: 120px;
+    }
+
+}
