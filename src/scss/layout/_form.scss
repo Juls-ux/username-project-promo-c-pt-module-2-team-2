@@ -19,7 +19,7 @@ main {
 }
 
 .title {
-    margin-block: 20px;
+    margin-block: 26px;
 
 }
 .form {
@@ -45,15 +45,17 @@ main {
 }
 
 .form_input {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 18px;
     padding-inline: 15px;
     height: 35px;
     width: 430px;
     border-radius: 5px;
-    border-color: rgb(240, 49, 183);
-    
 }
+.form_input::placeholder {
+    color: rgb(241, 150, 214);
+  }
+
 .form_button {
     justify-content: center;
     text-align: center;
@@ -63,6 +65,15 @@ main {
     margin-bottom: 60px;
     background-color: rgb(240, 49, 183);
     color: white;
+    border-radius: 5px;
     border-color: rgb(240, 49, 183);
 }
 
+.form_paragraph {
+    margin-bottom: 26px;
+}
+
+
+.span {
+    color: rgb(240, 49, 183); 
+}
