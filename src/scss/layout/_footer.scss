@@ -10,10 +10,20 @@
     &__adacheap {
         font-size: 14px;
         color: #707070;
+        font-weight: 400;
     }
 
     &__logo-adalab {
         width: 120px;
     }
+
+    @include tablet{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-inline: 20px;
+    }
+    @include desktop{
+        padding-inline: 200px;
+    } 
 
 }
