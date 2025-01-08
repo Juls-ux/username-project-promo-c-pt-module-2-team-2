@@ -1,15 +1,24 @@
 <main>
   <section>
-    <h3>DATOS DEL PRODUCTO</h3>
+    <h3 class="title">
+      <img
+        class="image1"
+        src="../images/icono-datos-de-producto.svg"
+        alt="icono producto"
+      />DATOS DEL PRODUCTO
+    </h3>
     <form>
       <div class="form">
-        <label for="imageUpload">Selecciona una imagen</label>
+        <label class="form_file" for="imageUpload"
+          >Selecciona tu imagen<span class="span">*</span></label
+        >
         <input
-          class="form_input"
           type="file"
+          class="form_file_up"
           id="imageUpload"
           name="image"
           accept="image/*"
+          required
         />
       </div>
       <div class="form">
@@ -39,7 +48,14 @@
         />
       </div>
     </form>
-    <h3>DATOS DEL VENDEDOR</h3>
+    <h3 class="title">
+      <img
+        class="image2"
+        src="../images/icono-datos-de-vendedor.svg"
+        alt="icono vendedor"
+      />
+      CONTACTO DEL VENDEDOR
+    </h3>
     <form>
       <div class="form">
         <label class="form_label" for="name">
