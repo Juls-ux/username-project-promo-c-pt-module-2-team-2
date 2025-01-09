@@ -1,79 +1,183 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 main {
-    margin-inline: 85px;
+   margin-inline: 25px;
+    @include tablet{
+        margin-inline: 35px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    @include desktop{
+        margin-inline: 85px;
+    }
+}
+.section {
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+
+    @include tablet{
+    justify-content: left;
+    text-align: left;
+
+    }
 }
 
-.image1 {
-    height: 18px;
-    width: 20px;
-    margin-right: 10px;
-}
-
-.image2 {
-    height: 22px;
-    margin-right: 8px;
-}
-
-.title {
-    margin-block: 26px;
-
-}
 .form {
-   font-size: 18px;
-   display: grid;
-   gap: 15px;
-}
-.form_file {
-    background-color: rgb(161, 236, 118);
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    height: 35px;
-    width: 430px;
-    font-size: 18px;
-    text-align: center;
-    padding-top: 5px;
-    margin-bottom: 15px;
-}
-.form_file_up {
-    display: none;
-}
-
-.form_input {
     font-size: 14px;
-    margin-bottom: 18px;
-    padding-inline: 15px;
-    height: 35px;
-    width: 430px;
-    border-radius: 5px;
-}
-.form_input::placeholder {
-    color: rgb(241, 150, 214);
-  }
+    display: grid;
+    gap:10px;
+    
+    @include tablet{
+        font-size: 16px;
+        gap: 15px;
+    }
 
-.form_button {
+    @include desktop{
+        font-size: 18px;
+        gap: 15px;
+    }
+   &_image_1 {
+        height: 12px;
+        width: 14px;
+        
+        @include tablet{
+            height: 16px;
+            width: 18px;
+        }
+
+        @include desktop{
+            height: 18px;
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+    &_image_2 {
+        height: 16px;
+        margin-right: 2px;
+
+        @include tablet{
+            height: 20px;
+            
+        }
+
+        @include desktop{ 
+            height: 22px;
+            margin-right: 8px;
+        }
+    }
+    &_title {
+        margin-block: 20px;
+        text-align: center;
+
+        @include tablet{
+            text-align: left;
+            font-size: 20px;
+        }
+
+        @include desktop{
+        margin-block: 26px;
+        }
+    }
+    &_file {
+        height: 26px;
+        width: 270px;
+        background-color: rgb(161, 236, 118);
+        color: white;
+        font-size:14px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 5px;
+        margin-bottom: 12px;
+
+        @include tablet{
+            font-size: 16px;
+            height: 30px;
+            width: 350px;
+            margin-bottom: 15px;
+        }
+        @include desktop{
+            font-size: 18px;
+            height: 35px;
+            width: 430px;
+        }
+    }
+    &_file_up {
+        display: none;
+    }
+    &_input {
+        font-size: 12px;
+        height: 26px;
+        width: 270px;
+        border-radius: 5px;
+        margin-bottom: 18px;
+        padding-inline: 15px;
+
+        @include tablet{
+            font-size: 14x;
+            height: 30px;
+            width: 350px;
+        }
+
+        @include desktop{
+            font-size: 14px;
+            height: 35px;
+            width: 430px;
+        }
+    }
+    &_input::placeholder {
+        color: rgb(241, 150, 214);
+    }
+    &_button {
+        margin-left: 45px;
+        margin-bottom: 30px;
+        background-color: rgb(240, 49, 183);
+        color: white;
+        border-radius: 5px;
+        border-color: rgb(240, 49, 183);
+        height: 26px;
+        width: 180px;
+
+        @include tablet{
+            margin-left: 65px;
+             height: 30px;
+             width: 210px;
+         }
+
+        @include desktop{
+            height: 35px;
+            width: 240px;
+            margin-top: 25px;
+            margin-bottom: 60px;
+        }
+    }
+    &_paragraph {
+        margin-bottom: 26px;
+    }
+    &_span {
+        margin-inline: 5px;
+        color: rgb(240, 49, 183); 
+    }
+}
+
+.container {
     justify-content: center;
-    text-align: center;
-    height: 35px;
-    width: 240px;
-    margin-top: 25px;
-    margin-bottom: 60px;
-    background-color: rgb(240, 49, 183);
-    color: white;
-    border-radius: 5px;
-    border-color: rgb(240, 49, 183);
+    align-items: center;
+    border: 2px solid rgb(161, 236, 118);
+    padding: 15px; 
+    width: 200px; 
+    text-align: center; 
+    margin-bottom: 25px;
+
+    &_img {
+        height: 50%;
+        width: 50%;
+
+    }
 }
 
-.form_paragraph {
-    margin-bottom: 26px;
-}
-
-
-.span {
-    color: rgb(240, 49, 183); 
-}
