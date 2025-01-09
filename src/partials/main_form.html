@@ -1,16 +1,17 @@
 <main>
-  <section>
-    <h3 class="title">
-      <img
-        class="image1"
-        src="../images/icono-datos-de-producto.svg"
-        alt="icono producto"
-      />DATOS DEL PRODUCTO
-    </h3>
+  <section class="section">
     <form>
+      <h3 class="form_title">
+        <img
+          class="form_image_1"
+          src="../images/icono-datos-de-producto.svg"
+          alt="icono producto"
+        />DATOS DEL PRODUCTO
+      </h3>
+
       <div class="form">
         <label class="form_file" for="imageUpload"
-          >Selecciona tu imagen<span class="span">*</span></label
+          >Selecciona tu imagen<span class="form_span">*</span></label
         >
         <input
           type="file"
@@ -23,7 +24,7 @@
       </div>
       <div class="form">
         <label class="form_label" for="price"
-          >Precio del producto<span class="span">*</span></label
+          >Precio del producto<span class="form_span">*</span></label
         >
         <input
           class="form_input"
@@ -36,7 +37,7 @@
       </div>
       <div class="form">
         <label class="form_label" for="name"
-          >Nombre del producto<span class="span">*</span></label
+          >Nombre del producto<span class="form_span">*</span></label
         >
         <input
           class="form_input"
@@ -47,9 +48,9 @@
           required
         />
       </div>
-      <h3 class="title">
+      <h3 class="form_title">
         <img
-          class="image2"
+          class="form_image_2"
           src="../images/icono-datos-de-vendedor.svg"
           alt="icono vendedor"
         />
@@ -57,7 +58,7 @@
       </h3>
       <div class="form">
         <label class="form_label" for="name">
-          Nombre Completo <span class="span">*</span></label
+          Nombre Completo<span class="form_span">*</span></label
         >
         <input
           class="form_input"
@@ -70,7 +71,7 @@
       </div>
       <div class="form">
         <label class="form_label" for="email"
-          >Email <span class="span">*</span></label
+          >Email<span class="form_span">*</span></label
         >
         <input
           class="form_input"
@@ -94,9 +95,21 @@
 
         <input class="form_button" type="submit" value="AÑADIR PRODUCTO" />
       </div>
+
+      <p class="form_paragraph">
+        <span class="form_span">*</span>Campos obligatorios
+      </p>
     </form>
-    <p class="form_paragraph">
-      <span class="span">*</span>Son campos obligatorios a rellenar
-    </p>
+  </section>
+  <section class="section">
+    <div class="container">
+      <img
+        class="container_img"
+        src="../images/7100TzCYGNL.__AC_SX300_SY300_QL70_ML2_.jpg"
+        alt="silla rosa"
+      />
+      <p class="container_price"></p>
+      <p class="container_name"></p>
+    </div>
   </section>
 </main>
