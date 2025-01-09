@@ -6,7 +6,11 @@
           class="form_image_1"
           src="../images/icono-datos-de-producto.svg"
           alt="icono producto"
-        />DATOS DEL PRODUCTO<img src="../images/angle-down.svg" />
+        />DATOS DEL PRODUCTO<img
+          class="js_form_arrow form_arrow"
+          src="../images/flecha-abajo.svg"
+          alt="flecha desplegable"
+        />
       </h3>
 
       <div class="form">
@@ -15,7 +19,7 @@
         >
         <input
           type="file"
-          class="form_file_up"
+          class="js_imgSelect form_file_up"
           id="imageUpload"
           name="image"
           accept="image/*"
@@ -27,7 +31,7 @@
           >Precio del producto<span class="form_span">*</span></label
         >
         <input
-          class="form_input"
+          class="js_inputPrice form_input"
           name="price"
           type="number"
           id="number"
@@ -40,13 +44,31 @@
           >Nombre del producto<span class="form_span">*</span></label
         >
         <input
-          class="form_input"
+          class="js_inputProduct form_input"
           name="name"
           type="text"
           id="name"
           placeholder="Ejem: Silla STYRSPEL de Ikea"
           required
         />
+        <div class="form_colors">
+          <section>
+            <button class="js_green green"></button>
+            <p>Muebles</p>
+          </section>
+          <section>
+            <button class="js_pink pink"></button>
+            <p>Ropa</p>
+          </section>
+          <section>
+            <button class="js_purple purple"></button>
+            <p>Informática</p>
+          </section>
+          <section>
+            <button class="js_orange orange"></button>
+            <p>Otros</p>
+          </section>
+        </div>
       </div>
       <h3 class="form_title">
         <img
@@ -54,14 +76,18 @@
           src="../images/icono-datos-de-vendedor.svg"
           alt="icono vendedor"
         />
-        CONTACTO DEL VENDEDOR
+        CONTACTO DEL VENDEDOR<img
+          class="js_form_arrow form_arrow"
+          src="../images/flecha-abajo.svg"
+          alt="flecha desplegable"
+        />
       </h3>
       <div class="form">
         <label class="form_label" for="name">
           Nombre Completo<span class="form_span">*</span></label
         >
         <input
-          class="form_input"
+          class="js_inputName form_input"
           name="name"
           type="text"
           id="name"
@@ -74,7 +100,7 @@
           >Email<span class="form_span">*</span></label
         >
         <input
-          class="form_input"
+          class="js_inputEmail form_input"
           name="email"
           class="form_email"
           type="email"
@@ -86,14 +112,18 @@
       <div class="form">
         <label class="form_label" for="phone">Teléfono</label>
         <input
-          class="form_input"
+          class="js_inputPhone form_input"
           class="form_phone"
           type="tel"
           id="phone"
           placeholder="Ej: 123456789"
         />
 
-        <input class="form_button" type="submit" value="AÑADIR PRODUCTO" />
+        <input
+          class="js_button form_button"
+          type="submit"
+          value="AÑADIR PRODUCTO"
+        />
       </div>
 
       <p class="form_paragraph">
@@ -104,12 +134,31 @@
   <section class="section">
     <div class="container">
       <img
-        class="container_img"
+        class="js_targetImage container_img"
         src="../images/7100TzCYGNL.__AC_SX300_SY300_QL70_ML2_.jpg"
         alt="silla rosa"
       />
-      <p class="container_price"></p>
-      <p class="container_name"></p>
+      <p class="js_targetPrice container_price">ffff</p>
+      <p class="js_targetName container_name">ffff</p>
+      <img
+        class="js_iconEmail iconContact"
+        src="../images/mail-icon.svg"
+        alt="icono email"
+      />
+      <img
+        class="js_iconPhone iconContact"
+        src="../images/call-icon.svg"
+        alt="icono telefono"
+      />
+    </div>
+    <div>
+      <h2>LISTADO</h2>
+      <ul class="js_productList listProduct"></ul>
+      <input
+        class="js_buttonDelet form_buttonDelet"
+        type="submit"
+        value="BORRAR PRODUCTOS"
+      />
     </div>
   </section>
 </main>
