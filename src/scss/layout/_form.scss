@@ -2,10 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+
 }
 
 main {
-   margin-inline: 25px;
+   padding-inline: 30px;
+   padding-block: 50px;
+   background-color: rgba(0, 0, 0, 0.02);
+
     @include tablet{
         margin-inline: 35px;
         display: grid;
@@ -15,10 +20,12 @@ main {
         margin-inline: 85px;
     }
 }
+
 .section {
     display: flex; 
     justify-content: center; 
     text-align: center;
+   
 
     @include tablet{
     justify-content: left;
@@ -31,6 +38,8 @@ main {
     font-size: 14px;
     display: grid;
     gap:10px;
+
+    
     
     @include tablet{
         font-size: 16px;
@@ -41,9 +50,21 @@ main {
         font-size: 18px;
         gap: 15px;
     }
-   &_image_1 {
-        height: 12px;
-        width: 14px;
+    
+    &_title{
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+
+   &_image_1, &_arrow {
+        
+        width: 24px;
+        margin-inline: 15px;
         
         @include tablet{
             height: 16px;
@@ -57,8 +78,8 @@ main {
         }
     }
     &_image_2 {
-        height: 16px;
-        margin-right: 2px;
+        width: 24px;
+        margin-inline: 15px;
 
         @include tablet{
             height: 20px;
@@ -72,7 +93,7 @@ main {
     }
     &_title {
         margin-block: 20px;
-        text-align: center;
+        text-align: left;
 
         @include tablet{
             text-align: left;
@@ -84,37 +105,37 @@ main {
         }
     }
     &_file {
-        height: 26px;
-        width: 270px;
-        background-color: rgb(161, 236, 118);
+        height: 45px;
+        width: 300px;
+        background-color: #90D10B;
         color: white;
-        font-size:14px;
+        font-size:15px;
+        font-weight: 400;
         cursor: pointer;
         border-radius: 5px;
+        padding-block: 10px;
+     
         text-align: center;
-        padding-top: 5px;
-        margin-bottom: 12px;
+        margin-bottom: 35px;
+
 
         @include tablet{
             font-size: 16px;
-            height: 30px;
-            width: 350px;
+          
             margin-bottom: 15px;
         }
-        @include desktop{
-            font-size: 18px;
-            height: 35px;
-            width: 430px;
-        }
+
     }
     &_file_up {
         display: none;
     }
     &_input {
+     
         font-size: 12px;
-        height: 26px;
-        width: 270px;
-        border-radius: 5px;
+        height: 45px;
+        width: 300px;
+        border: 0.6px solid; 
+        background-color: rgba(255, 255, 255, 0);
         margin-bottom: 18px;
         padding-inline: 15px;
 
@@ -131,17 +152,20 @@ main {
         }
     }
     &_input::placeholder {
-        color: rgb(241, 150, 214);
+        color: #EB2A82;
+        font-weight: 300;
     }
+
+
     &_button {
-        margin-left: 45px;
-        margin-bottom: 30px;
-        background-color: rgb(240, 49, 183);
+        margin-bottom: 45px;
+        align-self: center;
+
+        background-color:#EB2A82;
         color: white;
-        border-radius: 5px;
-        border-color: rgb(240, 49, 183);
-        height: 26px;
-        width: 180px;
+        border: none;
+        height: 45px;
+        width: 300px;
 
         @include tablet{
             margin-left: 0;
@@ -157,7 +181,7 @@ main {
         }
     }
     &_paragraph {
-        margin-bottom: 26px;
+        margin-bottom: 45px;
     }
     &_span {
         margin-inline: 5px;
