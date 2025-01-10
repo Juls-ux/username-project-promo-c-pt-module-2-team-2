@@ -53,10 +53,18 @@ main {
     
     &_title{
         font-size: 14px;
+      
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        @include tablet {
+            font-size: 18px;
+            
+            align-items: center;
+        justify-content: left;
+        }
     
     }
 
@@ -69,6 +77,7 @@ main {
         @include tablet{
             height: 16px;
             width: 18px;
+            margin-inline: 5px;
         }
 
         @include desktop{
@@ -82,29 +91,20 @@ main {
         margin-inline: 15px;
 
         @include tablet{
-            height: 20px;
-            
-        }
-
-        @include desktop{ 
-            height: 22px;
-            margin-right: 8px;
-        }
-    }
-    &_title {
-        margin-block: 20px;
-        text-align: left;
-
-        @include tablet{
-            text-align: left;
-            font-size: 20px;
+            height: 16px;
+            width: 18px;
+            margin-inline: 5px;
         }
 
         @include desktop{
-        margin-block: 26px;
+            height: 18px;
+            width: 20px;
+            margin-right: 10px;
         }
     }
+
     &_file {
+        margin-top: 30px;
         height: 45px;
         width: 300px;
         background-color: #90D10B;
@@ -121,8 +121,7 @@ main {
 
         @include tablet{
             font-size: 16px;
-          
-            margin-bottom: 15px;
+    
         }
 
     }
@@ -141,24 +140,25 @@ main {
 
         @include tablet{
             font-size: 14x;
-            height: 30px;
+
             width: 350px;
         }
 
         @include desktop{
             font-size: 14px;
-            height: 35px;
+          
             width: 430px;
         }
     }
     &_input::placeholder {
-        color: #EB2A82;
+        color: #eb2a817b;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 300;
     }
 
 
     &_button {
-        margin-bottom: 45px;
+      
         align-self: center;
 
         background-color:#EB2A82;
@@ -167,20 +167,11 @@ main {
         height: 45px;
         width: 300px;
 
-        @include tablet{
-            margin-left: 0;
-             height: 30px;
-             width: 210px;
-         }
 
-        @include desktop{
-            height: 35px;
-            width: 240px;
-            margin-top: 25px;
-            margin-bottom: 60px;
-        }
     }
     &_paragraph {
+        
+        font-size: 14px;
         margin-bottom: 45px;
     }
     &_span {
@@ -192,10 +183,13 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
+        align-items: center;
+
     }
 
     &_green {
+        
         background-color: #90D10B;
         border: none;
         width: 45px;
@@ -254,3 +248,6 @@ main {
     }
 }
 
+.list {
+    
+}
