@@ -187,6 +187,48 @@ main {
         margin-inline: 5px;
         color: rgb(240, 49, 183); 
     }
+
+    &_colors {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+
+    &_green {
+        background-color: #90D10B;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+
+    }
+
+    &_pink {
+        background-color: #EB2A82;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+
+    }
+
+    &_purple {
+        background-color: #8547E8;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+
+    }
+    &_orange {
+        background-color: #FC9A7C;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+
+    }
 }
 
 .container {
