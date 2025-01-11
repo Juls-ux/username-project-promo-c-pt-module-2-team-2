@@ -9,6 +9,7 @@ const purple = document.querySelector('.js_purple');
 const orange = document.querySelector('.js_orange ');
 
 const ProductContainer = document.querySelector('.js_ProductContainer');
+const selectcategoryText= document.querySelector('.js_selectcategory');
 
 //Funciones
 
@@ -16,16 +17,16 @@ const ProductContainer = document.querySelector('.js_ProductContainer');
 const handlerColourChange = (ev) => {
     const selectedButton = ev.currentTarget;
     if (selectedButton === green) {
-        ProductContainer.classList.toggle('container-green');
-
+        ProductContainer.classList.add('container-green');
+    
       } else if (selectedButton === pink) {
-        ProductContainer.classList.toggle('container-pink');
+        ProductContainer.classList.add('container-pink');
     
       } else if (selectedButton === purple) {
-        ProductContainer.classList.toggle('container-purple');
+        ProductContainer.classList.add('container-purple');
 
       } else if (selectedButton === orange) {
-        ProductContainer.classList.toggle('container-orange');
+        ProductContainer.classList.add('container-orange');
       }
 
 }
