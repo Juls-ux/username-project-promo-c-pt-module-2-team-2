@@ -8,13 +8,6 @@ const inputPrice = document.querySelector('.js_inputPrice');
 const inputProduct = document.querySelector('.js_inputProduct');
 
 
-//     BOTONES COLORES 
-
-const greenBtn = document.querySelector('.js_green');
-const pinkBtn = document.querySelector('.js_pink');
-const purpleBtn = document.querySelector('.js_purple');
-const orangeBtn = document.querySelector('.js_orange');
-
 //     INPUTS VENDEDOR
 
 const sellerName = document.querySelector('.js_inputName');
@@ -50,7 +43,7 @@ const handleImageUpload = (event) => {
   
       reader.onload = () => {
         // Cambiar la imagen del contenedor
-        targetImage.src = reader.result;
+        imgCard.src = reader.result;
       };
   
       // Leer el archivo como una URL de imagen
@@ -62,8 +55,8 @@ imageUpload.addEventListener('change', handleImageUpload);
 
 const handleInputPrice = (ev) => {
     const priceValue = inputPrice.value;
-
-    
+    /*priceCard.innerHTML = priceValue + '€';*/
+    priceCard.innerHTML = priceValue && !isNaN(priceValue) ? `${priceValue}€` : 'Precio no disponible';
 }; 
 
 inputPrice.addEventListener('input', handleInputPrice);
@@ -75,8 +68,6 @@ const inputProduct = (ev) => {
 inputProduct.addEventListener('input', handleInputProduct);
 
 
-
-// BOTON BORRAR TODOS LOS FAVS DE LA EVALUACION 
 
 const handleDeleteBtn = (ev) => {
     ev.preventDefault();
