@@ -32,7 +32,7 @@ const handlerColourChange = (ev) => {
 
 //Eventos
 green.addEventListener('click', handlerColourChange)
-pink.addEventListener('click', handlerColourChange);
+pink.addEventListener('click', handlerColourChange)
 purple.addEventListener('click', handlerColourChange);
 orange.addEventListener('click', handlerColourChange);
 
