@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('>> Ready :)');
+
 
 //SECCION COLORES
 
@@ -14,5 +14,24 @@ const ProductContainer = document.querySelector('.js_ProductContainer ');
 
 //Funciones
 
+
+const handlerColourChange = (ev) => {
+    const selectedButton = ev.currentTarget;
+    if (selectedButton === green) {
+        ProductContainer.classList.toggle('container-green');
+      } else if (selectedButton === pink) {
+        ProductContainer.classList.toggle('container-pink');
+      } else if (selectedButton === purple) {
+        ProductContainer.classList.toggle('container-purple');
+      } else if (selectedButton === orange) {
+        ProductContainer.classList.toggle('container-orange');
+      }
+
+}
+
 //Eventos
+green.addEventListener('click', handlerColourChange)
+pink.addEventListener('click', handlerColourChange);
+purple.addEventListener('click', handlerColourChange);
+orange.addEventListener('click', handlerColourChange);
 
