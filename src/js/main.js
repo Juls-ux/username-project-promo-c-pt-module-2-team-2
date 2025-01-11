@@ -24,7 +24,6 @@ const colors = {
 
 //Funciones
 
-
 const handlerColourChange = (ev) => {
   
   ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
@@ -37,12 +36,15 @@ const handlerColourChange = (ev) => {
     
       } else if (selectedButton === pink) {
         ProductContainer.classList.add('container-pink');
+        categoryText.classList.add('categoryTextPink');
     
       } else if (selectedButton === purple) {
         ProductContainer.classList.add('container-purple');
+        categoryText.classList.add('categoryTextPurple');
 
       } else if (selectedButton === orange) {
         ProductContainer.classList.add('container-orange');
+        categoryText.classList.add('categoryTextOrange');
       }
 
 }
@@ -53,10 +55,5 @@ green.addEventListener('click', handlerColourChange);
 pink.addEventListener('click', handlerColourChange);
 purple.addEventListener('click', handlerColourChange);
 orange.addEventListener('click', handlerColourChange);
-
-
-
-
-
 
 
