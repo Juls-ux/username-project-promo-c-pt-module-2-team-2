@@ -15,6 +15,8 @@ const selectcategoryText= document.querySelector('.js_selectcategory');
 
 
 const handlerColourChange = (ev) => {
+  ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
+
     const selectedButton = ev.currentTarget;
     if (selectedButton === green) {
         ProductContainer.classList.add('container-green');

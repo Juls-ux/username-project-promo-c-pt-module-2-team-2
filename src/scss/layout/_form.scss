@@ -229,6 +229,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgba(203, 203, 203, 0.687);
+    height:50%;
     padding: 10px;
    
      
@@ -238,7 +239,6 @@ main {
         @include tablet{
             padding: 25px;
             justify-content: right;
-            height: 70%;
             width: 450px;
         }
     &_img {
