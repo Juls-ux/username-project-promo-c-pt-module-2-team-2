@@ -183,8 +183,15 @@ main {
     &_img {
         max-width: 100%; 
         height: auto;
-       
-
     }
 }
 
+.display {
+    display: none;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: transform 0.8s ease;
+   
+}
