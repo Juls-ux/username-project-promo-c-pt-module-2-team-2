@@ -12,6 +12,9 @@
         width: 120px;
     }
 
+    &__adacheap{
+        font-size: 14px;
+    }
     @include tablet{
         flex-direction: row-reverse;
         justify-content: space-between;
