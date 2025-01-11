@@ -229,29 +229,27 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgba(203, 203, 203, 0.687);
-    height:50%;
+  
     padding: 10px;
-   
-     
     text-align: center; 
-    margin-bottom: 25px;
+    margin-top: 65px;
 
         @include tablet{
-            padding: 25px;
+            padding: 15px;
             justify-content: right;
-            width: 450px;
+            width: 500px;
+
         }
     &_img {
         max-width: 100%; 
         height: auto;
-       
-
     }
 }
 
 
 .container-green {
     background-color: #8fd10b51;
+    font-weight: 600;
     
 }
 .container-pink {
@@ -266,6 +264,35 @@ main {
 
 .container-orange {
     background-color:#fc9a7c7f;
-  
 }
 
+.categoryText{
+    font-weight: 600;
+}
+
+.categoryTextGreem {
+
+    color: #90D10B;
+}
+.categoryTextPink {
+
+    color:#EB2A82;
+}
+.categoryTextPurple {
+
+    color:#8547E8
+}
+.categoryTextOrange {
+
+    color:#FC9A7C;
+}
+ 
+.display {
+    display: none;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: transform 0.8s ease;
+    
+}

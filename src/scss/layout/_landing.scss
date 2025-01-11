@@ -1,3 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.landing{
+    margin:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    text-align: center;
+    &_header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_Img{
+            margin-bottom: 30px;
+            width: 420px;
+        }
+        &_Slg{
+            font-size: 30px;
+            font-weight: bold;
+            color: #EB2A82;
+            margin-bottom: 20px;
+        }
+        &_Txt{
+            font-size: 20px;
+            color: #000000;         
+        }
+    }
+    &_selection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        margin: 30px;
+        font-size: 20px;
+        &_ImgSell{
+            margin-bottom: 15.1px;
+        }
+        
+    }
+}
+.form_button{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+@include mobile{
+    .landing{
+        &_header{
+            &_Img{
+                width: 262px;
+            }                              
+            &_Slg{
+                font-size: 20px;
+            }
+            &_Txt{
+                font-size: 16px;
+            }
+        }
+    }
+    .form_button{
+        font-size: 18px;       
+    }
+}
+
+
 
   
 
