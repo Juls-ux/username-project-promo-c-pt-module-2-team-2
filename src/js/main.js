@@ -5,6 +5,8 @@
 //Variables
 const colorsUl = document.querySelector('.js_colorsUl');
 
+
+
 const green = document.querySelector('.js_green');
 const pink = document.querySelector('.js_pink');
 const purple = document.querySelector('.js_purple');
@@ -51,9 +53,47 @@ const renderOneColour = (colorObj) => {
 
 const renderAllColors = () => {
     let html = '';
-    for (const colorObj of allColors) { // Usar 'const colorObj' para cada objeto en 'allColors'
-        html += renderOneColour(colorObj); // Pasar cada objeto al renderizador
+    for (const colorObj of allColors) { 
+        html += renderOneColour(colorObj); 
     }
-    colorsUl.innerHTML = html; // Actualizar el contenido del UL
+    colorsUl.innerHTML = html; 
 }
+
+
+const handlerColourChange = (ev) => {
+
+  
+    ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
+  
+     const selectedButton = ev.currentTarget;
+
+      if (selectedButton === green) {
+       
+          ProductContainer.classList.add('container-green');
+          categoryText.classList.add('categoryTextGreen');
+      
+        } else if (selectedButton === pink) {
+          ProductContainer.classList.add('container-pink');
+          categoryText.classList.add('categoryTextPink');
+      
+        } else if (selectedButton === purple) {
+          ProductContainer.classList.add('container-purple');
+          categoryText.classList.add('categoryTextPurple');
+  
+        } else if (selectedButton === orange) {
+          ProductContainer.classList.add('container-orange');
+          categoryText.classList.add('categoryTextOrange');
+        }
+  
+  }
+
+  const addEventListenersToColors = () => {
+    const colorLis = document.querySelectorAll('.js_colorLi');
+    for (const colorLi of colorLis) {
+        colorLi.addEventListener('click', handlerColourChange);
+    }
+};
+
+//FUNCIONES
 renderAllColors();
+addEventListenersToColors()
