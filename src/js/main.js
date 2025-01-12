@@ -66,13 +66,6 @@ const renderAllColors = () => {
 }
 
 
-const addEventListenersToColors = () => {
-    const colorLis = document.querySelectorAll('.js_colorLi');
-    console.log(colorLis)
-    for (const colorLi of colorLis) {
-        colorLi.addEventListener('click', handlerColourChange);
-    }
-};
 
 
 const handlerColourChange = (ev) => {
@@ -81,10 +74,9 @@ const handlerColourChange = (ev) => {
 
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
-    console.log(selectedLi);
 
     // Aplica las clases según la categoría
-    if (category === "Muebles") {
+    if (category === ["Muebles"]) {
         
         ProductContainer.classList.add('container-green');
         categoryText.classList.add('categoryTextGreen');
@@ -105,6 +97,14 @@ const handlerColourChange = (ev) => {
   
   }
 
+  const addEventListenersToColors = () => {
+    const colorLis = document.querySelectorAll('.js_colorLi');
+    console.log(colorLis)
+    for (const colorLi of colorLis) {
+        colorLi.addEventListener('click', handlerColourChange);
+        
+    }
+};
 
 
 //FUNCIONES
