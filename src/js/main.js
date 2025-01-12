@@ -11,24 +11,49 @@ const purple = document.querySelector('.js_purple');
 const orange = document.querySelector('.js_orange');
 
 const ProductContainer = document.querySelector('.js_ProductContainer');
-const selectcategoryText= document.querySelector('.js_selectcategory');
+const selectcategoryText = document.querySelector('.js_selectcategory');
 
-const categoryText = document.querySelector('.js_categoryText'); // Asegúrate de esta selección
+const categoryText = document.querySelector('.js_categoryText');
 
 
 //Variable de colores
-const colorObj = {
-    color:"#90D10B",
-    category: "Muebles",
-};
 
+let allColors = [
+    {
+        color: "#90D10B",
+        category: "Muebles",
+    },
+    {
+        color: "#EB2A82",
+        category: "Ropa",
+    },
+    {
+        color: "#8547E8",
+        category: "Informática",
+    },
+    {
+        color: "#FC9A7C",
+        category: "Otros",
+    },
+
+]
 
 //Funciones
+const renderOneColour = (colorObj) => {
+    const html= `
+    <li class="js_colorLi colorLi">
+      <button class="colorPalette" style="background-color: ${colorObj.color};"></button>
+      <p class="js_categoryText categoryText">${colorObj.category}</p>
+    </li>`;
 
-colorsUl.innerHTML = `
-  <li class="js_colorLi colorLi">
-    <button class="colorPalette" style="background-color: ${colorObj.color};"></button>
-    <p class="js_categoryText categoryText">${colorObj.category}</p>
-  </li>`;
+    return html;
+};
 
-
+const renderAllColors = () => {
+    let html = '';
+    for (const colorObj of allColors) { // Usar 'const colorObj' para cada objeto en 'allColors'
+        html += renderOneColour(colorObj); // Pasar cada objeto al renderizador
+    }
+    colorsUl.innerHTML = html; // Actualizar el contenido del UL
+}
+renderAllColors();
