@@ -74,25 +74,24 @@ const handlerColourChange = (ev) => {
 
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
+    console.log(`Categoría seleccionada: ${category}`);
 
-    // Aplica las clases según la categoría
-    if (category === ["Muebles"]) {
-        
+    if (category === "Muebles") {
         ProductContainer.classList.add('container-green');
         categoryText.classList.add('categoryTextGreen');
-        console.log('muebles');
 
     } else if (category === "Ropa") {
         ProductContainer.classList.add('container-pink');
         categoryText.classList.add('categoryTextPink');
-
+  
     } else if (category === "Informática") {
         ProductContainer.classList.add('container-purple');
         categoryText.classList.add('categoryTextPurple');
-
+      
     } else if (category === "Otros") {
         ProductContainer.classList.add('container-orange');
         categoryText.classList.add('categoryTextOrange');
+        
     }
   
   }
