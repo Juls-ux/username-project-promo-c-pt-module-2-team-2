@@ -188,6 +188,7 @@ main {
 
     }
 
+
     &_green {
         
         background-color: #90D10B;
@@ -249,6 +250,7 @@ main {
 
 .container-green {
     background-color: #8fd10b51;
+
     font-weight: 600;
     
 }
@@ -300,4 +302,15 @@ main {
 
 .list {
     margin-top: auto;
+}
+
+.colorPalette {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+}
+
+.colorLi {
+    list-style: none;
 }

@@ -3,6 +3,8 @@
 //SECCION COLORES
 
 //Variables
+const colorsUl = document.querySelector('.js_colorsUl');
+
 const green = document.querySelector('.js_green');
 const pink = document.querySelector('.js_pink');
 const purple = document.querySelector('.js_purple');
@@ -13,47 +15,20 @@ const selectcategoryText= document.querySelector('.js_selectcategory');
 
 const categoryText = document.querySelector('.js_categoryText'); // Asegúrate de esta selección
 
-//Objeto de colores
-const colors = {
-  green: 'container-green',
-  pink: 'container-pink',
-  purple: 'container-purple',
-  orange: 'container-orange',
+
+//Variable de colores
+const colorObj = {
+    color:"#90D10B",
+    category: "Muebles",
 };
 
 
 //Funciones
 
-const handlerColourChange = (ev) => {
-  
-  ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
-
-   const selectedButton = ev.currentTarget;
-    if (selectedButton === green) {
-     
-        ProductContainer.classList.add('container-green');
-        categoryText.classList.add('categoryTextGreen');
-    
-      } else if (selectedButton === pink) {
-        ProductContainer.classList.add('container-pink');
-        categoryText.classList.add('categoryTextPink');
-    
-      } else if (selectedButton === purple) {
-        ProductContainer.classList.add('container-purple');
-        categoryText.classList.add('categoryTextPurple');
-
-      } else if (selectedButton === orange) {
-        ProductContainer.classList.add('container-orange');
-        categoryText.classList.add('categoryTextOrange');
-      }
-
-}
-
-
-//Eventos
-green.addEventListener('click', handlerColourChange);
-pink.addEventListener('click', handlerColourChange);
-purple.addEventListener('click', handlerColourChange);
-orange.addEventListener('click', handlerColourChange);
+colorsUl.innerHTML = `
+  <li class="js_colorLi colorLi">
+    <button class="colorPalette" style="background-color: ${colorObj.color};"></button>
+    <p class="js_categoryText categoryText">${colorObj.category}</p>
+  </li>`;
 
 
