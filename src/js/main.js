@@ -79,6 +79,12 @@ const handlerColourChange = (ev) => {
  
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
+   
+    const AllCategoryList =document.querySelectorAll('.js_colorLi');
+    console.log(AllCategoryList)
+    for (const CategoryList of AllCategoryList) {
+        CategoryList.classList.remove('categoryTextGreen', 'categoryTextPink','categoryTextPurple', 'categoryTextOrange');
+    }
  
 
     // Obtener la categoría seleccionada
@@ -90,7 +96,7 @@ const handlerColourChange = (ev) => {
     if (selectedColor) {
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
-        colorsUl.classList.add(selectedColor.textClassName);
+        selectedLi.classList.add(selectedColor.textClassName);
 
     } else {
         console.warn(`Categoría no encontrada: ${category}`);
