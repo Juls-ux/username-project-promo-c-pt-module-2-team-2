@@ -64,6 +64,13 @@ const renderAllColors = () => {
     for (const colorLi of AllcolorList) {
         colorLi.addEventListener('click', handlerColourChange);
     }
+
+    const AllCategoryList =document.querySelectorAll('.js_categoryText');
+    console.log(AllCategoryList)
+    for (const CategoryList of AllCategoryList) {
+        CategoryList.addEventListener('click', handlerColourChange);
+    }
+
 }
 
 
@@ -72,8 +79,7 @@ const handlerColourChange = (ev) => {
  
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
-    //categoryText.classList.remove('categoryTextGreen','categoryTextPink', 'categoryTextPurple','categoryTextOrange'
-    //);
+ 
 
     // Obtener la categoría seleccionada
     const selectedLi = ev.currentTarget;
@@ -84,7 +90,8 @@ const handlerColourChange = (ev) => {
     if (selectedColor) {
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
-       // categoryText.classList.add(selectedColor.textClassName);
+        colorsUl.classList.add(selectedColor.textClassName);
+
     } else {
         console.warn(`Categoría no encontrada: ${category}`);
     }
