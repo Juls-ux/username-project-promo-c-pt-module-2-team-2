@@ -34,7 +34,7 @@ const emailCard = document.querySelector('.js_iconEmail');
 
 //     EVENTOS Y FUNCIONES 
 
-let prodList = [];
+let productList = [];
 
 const handleImageUpload = (event) => {
     const file = event.target.files[0]; // Obtener el archivo seleccionado
@@ -61,8 +61,9 @@ const handleInputPrice = (ev) => {
 
 inputPrice.addEventListener('input', handleInputPrice);
 
-const inputProduct = (ev) => {
+const handleInputProduct = (ev) => {
     const prodValue = inputProduct.value;
+    nameCard.innerHTML = inputProduct.value;
 }; 
 
 inputProduct.addEventListener('input', handleInputProduct);
