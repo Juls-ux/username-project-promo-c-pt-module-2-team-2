@@ -5,12 +5,7 @@
 //Variables
 const colorsUl = document.querySelector('.js_colorsUl');
 
-//const green = document.querySelector('.js_green');
-//const pink = document.querySelector('.js_pink');
-//const purple = document.querySelector('.js_purple');
-//const orange = document.querySelector('.js_orange');
-
-const ProductContainer = document.querySelector('.js_ProductContainer')
+const ProductContainer = document.querySelector('.js_ProductContainer');
 const selectcategoryText = document.querySelector('.js_selectcategory');
 
 const categoryText = document.querySelector('.js_categoryText');
@@ -74,17 +69,24 @@ const renderAllColors = () => {
 
 const handlerColourChange = (ev) => {
  
+    if (!ProductContainer || !categoryText) {
+        console.error('No se encontraron elementos necesarios en el DOM.');
+        return;
+    }
 
-    ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
-    categoryText.classList.remove('categoryTextGreen', 'categoryTextPink', 'categoryTextPurple', 'categoryTextOrange');
+    // Eliminar clases de color anteriores
+    ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
+    categoryText.classList.remove('categoryTextGreen','categoryTextPink', 'categoryTextPurple','categoryTextOrange'
+    );
 
     // Obtener la categoría seleccionada
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
 
-    // Aplicar clases según la categoría
-    const selectedColor = AllcolorList.find(colorObj => colorObj.category === category);
+    // Buscar el color correspondiente
+    const selectedColor = allColors.find((colorObj) => colorObj.category === category);
     if (selectedColor) {
+        // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
         categoryText.classList.add(selectedColor.textClassName);
     } else {
@@ -93,9 +95,6 @@ const handlerColourChange = (ev) => {
   
   }
 
-
-
-
 //FUNCIONES
 renderAllColors();
-handlerColourChange();
+
