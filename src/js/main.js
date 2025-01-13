@@ -10,7 +10,7 @@ const colorsUl = document.querySelector('.js_colorsUl');
 //const purple = document.querySelector('.js_purple');
 //const orange = document.querySelector('.js_orange');
 
-const ProductContainer = document.querySelector('.js_ProductContainer');
+const ProductContainer = document.querySelector('.js_ProductContainer')
 const selectcategoryText = document.querySelector('.js_selectcategory');
 
 const categoryText = document.querySelector('.js_categoryText');
@@ -63,49 +63,39 @@ const renderAllColors = () => {
         html += renderOneColour(colorObj); 
     }
     colorsUl.innerHTML = html; 
+
+    const AllcolorList = document.querySelectorAll('.js_colorLi');
+    console.log(AllcolorList)
+    for (const colorLi of AllcolorList) {
+        colorLi.addEventListener('click', handlerColourChange);
+    }
 }
 
 
-
-
 const handlerColourChange = (ev) => {
+ 
+
     ProductContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
     categoryText.classList.remove('categoryTextGreen', 'categoryTextPink', 'categoryTextPurple', 'categoryTextOrange');
 
+    // Obtener la categoría seleccionada
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
-    console.log(`Categoría seleccionada: ${category}`);
 
-    if (category === "Muebles") {
-        ProductContainer.classList.add('container-green');
-        categoryText.classList.add('categoryTextGreen');
-
-    } else if (category === "Ropa") {
-        ProductContainer.classList.add('container-pink');
-        categoryText.classList.add('categoryTextPink');
-  
-    } else if (category === "Informática") {
-        ProductContainer.classList.add('container-purple');
-        categoryText.classList.add('categoryTextPurple');
-      
-    } else if (category === "Otros") {
-        ProductContainer.classList.add('container-orange');
-        categoryText.classList.add('categoryTextOrange');
-        
+    // Aplicar clases según la categoría
+    const selectedColor = AllcolorList.find(colorObj => colorObj.category === category);
+    if (selectedColor) {
+        ProductContainer.classList.add(selectedColor.className);
+        categoryText.classList.add(selectedColor.textClassName);
+    } else {
+        console.warn(`Categoría no encontrada: ${category}`);
     }
   
   }
 
-  const addEventListenersToColors = () => {
-    const colorLis = document.querySelectorAll('.js_colorLi');
-    console.log(colorLis)
-    for (const colorLi of colorLis) {
-        colorLi.addEventListener('click', handlerColourChange);
-        
-    }
-};
+
 
 
 //FUNCIONES
 renderAllColors();
-addEventListenersToColors()
+handlerColourChange();
