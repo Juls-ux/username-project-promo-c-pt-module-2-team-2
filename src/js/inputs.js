@@ -23,18 +23,17 @@ const prodList = document.querySelector('.js_productList');
 //     IMAGEN 
 
 const imageUpload = document.querySelector('#imageUpload');
-const imgCard = document.querySelector('.js_targetImage');
+const imgCard = document.querySelector('.js_cardImage');
 
 //     CARD
 
-const priceCard = document.querySelector('.js_targetPrice');
-const nameCard = document.querySelector('.js_targetName');
+const priceCard = document.querySelector('.js_cardPrice');
+const nameCard = document.querySelector('.js_cardName');
 const emailCard = document.querySelector('.js_iconEmail');
 
 
 //     EVENTOS Y FUNCIONES 
 
-let productList = [];
 
 const handleImageUpload = (event) => {
     const file = event.target.files[0]; // Obtener el archivo seleccionado
@@ -54,10 +53,18 @@ const handleImageUpload = (event) => {
 imageUpload.addEventListener('change', handleImageUpload);
 
 const handleInputPrice = (ev) => {
-    const priceValue = inputPrice.value;
-    /*priceCard.innerHTML = priceValue + '€';*/
-    priceCard.innerHTML = priceValue && !isNaN(priceValue) ? `${priceValue}€` : 'Precio no disponible';
-}; 
+    const priceValue = inputPrice.value.trim();  // Eliminar espacios alrededor del valor
+    const numericValue = parseFloat(priceValue); // Convertir el valor a un número flotante
+    
+    // Verificar si es un número válido
+    if (!isNaN(numericValue) && numericValue >= 0) {
+        // Formatear el precio con dos decimales
+        priceCard.innerHTML = `${numericValue.toFixed(2)}€`;  // Mostrar con 2 decimales
+    } else {
+        priceCard.innerHTML = 'Precio no disponible';
+    }
+};
+
 
 inputPrice.addEventListener('input', handleInputPrice);
 
