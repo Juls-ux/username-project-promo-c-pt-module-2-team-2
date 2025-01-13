@@ -8,7 +8,7 @@ const colorsUl = document.querySelector('.js_colorsUl');
 const ProductContainer = document.querySelector('.js_ProductContainer');
 const selectcategoryText = document.querySelector('.js_selectcategory');
 
-const categoryText = document.querySelector('.js_categoryText');
+//const categoryText = document.querySelectorAll('.js_categoryText');
 
 
 //Variable de colores
@@ -69,26 +69,22 @@ const renderAllColors = () => {
 
 const handlerColourChange = (ev) => {
  
-    if (!ProductContainer || !categoryText) {
-        console.error('No se encontraron elementos necesarios en el DOM.');
-        return;
-    }
-
+ 
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
-    categoryText.classList.remove('categoryTextGreen','categoryTextPink', 'categoryTextPurple','categoryTextOrange'
-    );
+    //categoryText.classList.remove('categoryTextGreen','categoryTextPink', 'categoryTextPurple','categoryTextOrange'
+    //);
 
     // Obtener la categoría seleccionada
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
 
     // Buscar el color correspondiente
-    const selectedColor = allColors.find((colorObj) => colorObj.category === category);
+    const selectedColor = allColors.find((eachObj) => eachObj.category === category);
     if (selectedColor) {
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
-        categoryText.classList.add(selectedColor.textClassName);
+       // categoryText.classList.add(selectedColor.textClassName);
     } else {
         console.warn(`Categoría no encontrada: ${category}`);
     }
