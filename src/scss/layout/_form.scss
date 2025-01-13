@@ -173,6 +173,7 @@ main {
         
         font-size: 14px;
         margin-bottom: 45px;
+        margin-top: 25px;
     }
     &_span {
         margin-inline: 5px;
@@ -228,17 +229,17 @@ main {
 .container {
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(161, 236, 118);
-    padding: 15px; 
-     
+    background-color: rgba(203, 203, 203, 0.687);
+  
+    padding: 10px;
     text-align: center; 
-    margin-bottom: 25px;
+    margin-top: 65px;
 
         @include tablet{
-            padding: 35px;
+            padding: 15px;
             justify-content: right;
-            height: 70%;
-            width: 450px;
+            width: 500px;
+
         }
     &_img {
         max-width: 100%; 
@@ -246,6 +247,47 @@ main {
     }
 }
 
+
+.container-green {
+    background-color: #8fd10b51;
+    font-weight: 600;
+    
+}
+.container-pink {
+    background-color:#eb2a8152;
+    
+}
+
+.container-purple {
+    background-color:#8547e85c;
+    
+}
+
+.container-orange {
+    background-color:#fc9a7c7f;
+}
+
+.categoryText{
+    font-weight: 600;
+}
+
+.categoryTextGreen {
+
+    color: #90D10B;
+}
+.categoryTextPink {
+
+    color:#EB2A82;
+}
+.categoryTextPurple {
+
+    color:#8547E8
+}
+.categoryTextOrange {
+
+    color:#FC9A7C;
+}
+ 
 .display {
     display: none;
 }
@@ -253,5 +295,10 @@ main {
 .arrow-up {
     transform: rotate(180deg);
     transition: transform 0.8s ease;
+    
 }
 
+
+.list {
+    
+}
