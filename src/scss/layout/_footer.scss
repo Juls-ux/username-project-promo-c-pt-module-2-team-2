@@ -18,7 +18,7 @@
     @include tablet{
         flex-direction: row-reverse;
         justify-content: space-between;
-        padding-inline: 20px;
+        padding-inline: 35px;
     }
     @include desktop{
         padding-inline: 200px;
