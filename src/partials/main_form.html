@@ -30,7 +30,7 @@
         <input
           class="js_inputPrice form_input"
           name="price"
-          type="number"
+          type="float"
           id="number"
           placeholder="Ejem: 25,50€"
           required
@@ -127,14 +127,15 @@
         alt="icono telefono"
       />
     </div>
-    <div>
-      <h2>LISTADO</h2>
-      <ul class="js_productList listProduct"></ul>
-      <input
-        class="js_buttonDelete form_buttonDelete"
-        type="submit"
-        value="BORRAR PRODUCTOS"
-      />
-    </div>
   </section>
+  <div>
+    <div class="border"></div>
+    <h3 class="list">TUS PRODUCTOS</h3>
+    <ul class="js_productList listProduct"></ul>
+    <input
+      class="js_buttonDelet list_Delet"
+      type="submit"
+      value="BORRAR PRODUCTOS"
+    />
+  </div>
 </main>
