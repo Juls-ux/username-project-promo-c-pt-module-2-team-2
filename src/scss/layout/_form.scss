@@ -222,21 +222,28 @@ main {
 
 .container-green {
     background-color: #8fd10b51;
+    box-shadow: 4px 4px 10px #49680a61;
     font-weight: 600;
 }
 
 .container-pink {
     background-color:#eb2a8152;
+    box-shadow: 4px 4px 10px #eb2a8152;
+    font-weight: 600;
     
 }
 
 .container-purple {
     background-color:#8547e85c;
+    box-shadow: 4px 4px 10px #8547e85c;
+    font-weight: 600;
     
 }
 
 .container-orange {
     background-color:#fc9a7c7f;
+    box-shadow: 4px 4px 10px #fc9a7c7f;;
+    font-weight: 600;
 }
 
 .categoryText{
@@ -258,6 +265,7 @@ main {
     color:#8547E8;
     font-size: 17px;
 }
+
 .categoryTextOrange {
 
     color:#FC9A7C;
