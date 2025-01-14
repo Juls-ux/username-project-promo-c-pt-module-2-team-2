@@ -189,6 +189,16 @@ main {
 
     }
 
+    &_colorsul{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
     &_green {
         
         background-color: #90D10B;
@@ -299,6 +309,12 @@ main {
 }
 
 
-.list {
-    
+.colorPalette {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+}
+.colorLi {
+    list-style: none;
 }
