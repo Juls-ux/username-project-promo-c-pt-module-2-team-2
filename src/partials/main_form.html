@@ -50,7 +50,6 @@
         <div>
           <ul class="js_colorsUl form_colorsul"></ul>
         </div>
-
       </div>
       <h3 class="form_title">
         <img
@@ -95,11 +94,7 @@
           type="tel"
           id="phone"
           placeholder="Ej: 123456789"
-        />
-        <input
-          class="js_button form_button"
-          type="submit"
-          value="AÑADIR PRODUCTO"
+          required
         />
       </div>
       <p class="form_paragraph">
@@ -114,8 +109,9 @@
         src="../images/7100TzCYGNL.__AC_SX300_SY300_QL70_ML2_.jpg"
         alt="silla rosa"
       />
-      <p class="js_cardPrice container_price">ffff</p>
-      <p class="js_cardName container_name">ffff</p>
+      <p class="js_cardPrice container_price">Precio del producto:</p>
+      <p class="js_cardName container_name">Nombre del producto:</p>
+      <p class="js_sellerName container_seller">Nombre del vendedor:</p>
       <img
         class="js_iconEmail iconContact"
         src="../images/mail-icon.svg"
@@ -129,6 +125,11 @@
     </div>
   </section>
   <div>
+    <input
+      class="js_button form_button"
+      type="submit"
+      value="AÑADIR PRODUCTO"
+    />
     <div class="border"></div>
     <h3 class="list">TUS PRODUCTOS</h3>
     <ul class="js_productList listProduct"></ul>
