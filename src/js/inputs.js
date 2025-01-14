@@ -18,7 +18,6 @@ const sellerPhone = document.querySelector('.js_inputPhone');
 
 const addBtn = document.querySelector('.js_button');
 const deleteBtn = document.querySelector('.js_buttonDelete');
-const prodList = document.querySelector('.js_productList');
 
 //     IMAGEN 
 
@@ -74,7 +73,6 @@ const handleInputProduct = (ev) => {
 }; 
 
 inputProduct.addEventListener('input', handleInputProduct);
-
 
 
 const handleDeleteBtn = (ev) => {
