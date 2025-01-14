@@ -8,6 +8,7 @@ const colorsUl = document.querySelector('.js_colorsUl');
 const ProductContainer = document.querySelector('.js_ProductContainer');
 const selectcategoryText = document.querySelector('.js_selectcategory');
 
+
 //const categoryText = document.querySelectorAll('.js_categoryText');
 
 
@@ -75,28 +76,39 @@ const renderAllColors = () => {
 
 
 const handlerColourChange = (ev) => {
- 
- 
+    ev.preventDefault();
+    const arrowDown1 = document.querySelector(".js_form_arrow1");
+    const arrowDown2 = document.querySelector(".js_form_arrow2");
+    const inputForm1 = document.querySelector(".js_form1");
+    const inputForm2 = document.querySelector(".js_form2");
+
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
+   
    
     const AllCategoryList =document.querySelectorAll('.js_colorLi');
     console.log(AllCategoryList)
     for (const CategoryList of AllCategoryList) {
         CategoryList.classList.remove('categoryTextGreen', 'categoryTextPink','categoryTextPurple', 'categoryTextOrange');
     }
- 
 
+
+ 
     // Obtener la categoría seleccionada
     const selectedLi = ev.currentTarget;
     const category = selectedLi.dataset.category;
 
     // Buscar el color correspondiente
+    
     const selectedColor = allColors.find((eachObj) => eachObj.category === category);
     if (selectedColor) {
+        ev.preventDefault();
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
         selectedLi.classList.add(selectedColor.textClassName);
+
+        inputForm2.classList.toggle("display");
+        arrowDown2.classList.add("arrow-up");
 
     } else {
         console.warn(`Categoría no encontrada: ${category}`);
