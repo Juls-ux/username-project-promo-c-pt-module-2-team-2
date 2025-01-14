@@ -203,15 +203,15 @@ main {
 .container {
     justify-content: center;
     align-items: center;
-    background-color: rgba(203, 203, 203, 0.687);
+    background-color: rgba(203, 203, 203, 0);
     padding: 10px;
     text-align: center; 
-    margin-top: 65px;
+  
 
         @include tablet{
             padding: 15px;
             justify-content: right;
-            width: 500px;
+            height: 450px; 
         }
 
     &_img {
@@ -246,18 +246,22 @@ main {
 .categoryTextGreen {
 
     color: #90D10B;
+    font-size: 17px;
 }
 .categoryTextPink {
 
     color:#EB2A82;
+    font-size: 17px;
 }
 .categoryTextPurple {
 
-    color:#8547E8
+    color:#8547E8;
+    font-size: 17px;
 }
 .categoryTextOrange {
 
     color:#FC9A7C;
+    font-size: 17px;
 }
  
 .display {
