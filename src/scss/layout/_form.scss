@@ -140,17 +140,29 @@ main {
     }
     &_button {
         align-self: center;
-        background-color:#EB2A82;
+       
         color: white;
         border: none;
         height: 45px;
         width: 300px;
         font-size: 16px;
         
+    }
+
+    &_buttonSub{
+        align-self: center;
+        background-color:#EB2A82;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        margin-top:80px;
+        align-items: center;
+        
         &:hover {
             background-color: #90D10B;
         }
-
     }
     &_paragraph {
         font-size: 14px;
@@ -346,6 +358,7 @@ main {
 }
 
 .border {
+
     margin-top: 45px;
     margin-bottom: 25px;
     border-top: 2px solid #EB2A82;

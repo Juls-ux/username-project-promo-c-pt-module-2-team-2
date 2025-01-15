@@ -85,6 +85,7 @@ const handlerColourChange = (ev) => {
 
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
+    inputForm2.classList.remove("display-2");
    
    
     const AllCategoryList =document.querySelectorAll('.js_colorLi');
