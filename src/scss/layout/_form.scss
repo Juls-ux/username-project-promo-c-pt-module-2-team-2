@@ -98,7 +98,6 @@ main {
         font-size:15px;
         font-weight: 400;
         cursor: pointer;
-        border-radius: 5px;
         padding-block: 10px;
         text-align: center;
         margin-bottom: 35px;
@@ -136,6 +135,7 @@ main {
         font-weight: 300;
     }
     &_button {
+<<<<<<< HEAD
         text-align: center;
 
         @include tablet{
@@ -148,6 +148,20 @@ main {
         border: none;
         height: 40px;
         width: 200px
+=======
+        
+        align-self: center;
+        background-color:#EB2A82;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        
+        &:hover {
+            background-color: #90D10B;
+        }
+>>>>>>> main
     }
     &_paragraph {
         font-size: 14px;
@@ -203,23 +217,69 @@ main {
         height: 45px;
         border-radius: 15px;
     }
+    &_texto-explicativo{
+        font-size: 14px;
+        margin-block: 15px;
+    }
 }
 
 .container {
     justify-content: center;
     align-items: center;
-    background-color: rgba(203, 203, 203, 0);
     padding: 10px;
     text-align: center; 
+<<<<<<< HEAD
+=======
+    margin-bottom: 40px;
+    max-width: 100%; 
+    box-shadow: 4px 4px 10px #3f3f3f5c;
+  
+>>>>>>> main
 
         @include tablet{
-            padding: 15px;
+            height: 600px;
+            padding-inline: 10px;
+            padding-block: 15px;
             justify-content: right;
-            height: 450px; 
+        }
+        
+        @include desktop{
+            max-width: 100%; 
+            padding-inline: 10px;
+            padding-block: 15px;
+            justify-content: left;
         }
     &_img {
         max-width: 100%; 
         height: auto;
+        
+    }
+
+    &_price{
+        font-size: 30px;
+        color: #EB2A82;
+        font-weight: 600;
+        text-align: left;
+        margin-top: 20px;
+    }
+    &_name {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    &_seller {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        margin-top: 60px;
+    }
+
+    &_icon-section{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        margin-top: 20px;
     }
 }
 
@@ -295,6 +355,7 @@ main {
     margin-top: 45px;
     margin-bottom: 25px;
     border-top: 2px solid #EB2A82;
+    width: 100%;
 }
 
 .list{
@@ -311,8 +372,8 @@ main {
     }
 }
 .list_Delet {
-    margin-top: 35px;
-    background-color:#EB2A82;
+    align-self: center;
+    background-color:#000000;
     color: white;
     border: none;
     height: 40px;
