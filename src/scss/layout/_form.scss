@@ -142,6 +142,10 @@ main {
         border: none;
         height: 45px;
         width: 300px;
+        
+        &:hover {
+            background-color: #90D10B;
+        }
     }
     &_paragraph {
         font-size: 14px;
@@ -203,9 +207,10 @@ main {
 .container {
     justify-content: center;
     align-items: center;
-    background-color: rgba(203, 203, 203, 0);
     padding: 10px;
     text-align: center; 
+   
+    box-shadow: 4px 4px 10px #3f3f3f5c;
   
 
         @include tablet{
@@ -217,6 +222,33 @@ main {
     &_img {
         max-width: 100%; 
         height: auto;
+    }
+
+    &_price{
+        font-size: 30px;
+        color: #EB2A82;
+        font-weight: 600;
+        text-align: left;
+        margin-top: 20px;
+    }
+    &_name {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    &_seller {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        margin-top: 60px;
+    }
+
+    &_icon-section{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        margin-top: 20px;
     }
 }
 
