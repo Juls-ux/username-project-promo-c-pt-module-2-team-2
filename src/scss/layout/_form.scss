@@ -220,8 +220,17 @@ main {
   
 
         @include tablet{
-            padding: 15px;
+            height: 600px;
+            padding-inline: 10px;
+            padding-block: 15px;
             justify-content: right;
+        }
+        
+        @include desktop{
+            max-width: 100%; 
+            padding-inline: 10px;
+            padding-block: 15px;
+            justify-content: left;
         }
 
     &_img {
