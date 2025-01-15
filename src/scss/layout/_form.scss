@@ -34,6 +34,10 @@ main {
     font-size: 14px;
     display: grid;
     gap:10px;
+    @include mobile {
+        place-items: center;
+    }
+
 
     @include tablet{
         font-size: 16px;
@@ -213,24 +217,25 @@ main {
     padding: 10px;
     text-align: center; 
     margin-bottom: 40px;
-    max-width: 100%; 
     box-shadow: 4px 4px 10px #3f3f3f5c;
+    height: auto;
   
         @include tablet{
-            height: 600px;
+            
             padding-inline: 10px;
             padding-block: 15px;
             justify-content: right;
+            height: 750px;
         }
         
         @include desktop{
-            max-width: 100%; 
+          
             padding-inline: 10px;
             padding-block: 15px;
             justify-content: left;
         }
     &_img {
-        max-width: 100%; 
+        max-width: 350px;
         height: auto;
         
     }
@@ -267,6 +272,8 @@ main {
     background-color: #8fd10b51;
     box-shadow: 4px 4px 10px #49680a61;
     font-weight: 600;
+    background: linear-gradient(to bottom, #8fd10b51 50%, #8fd10b78 50%);
+
 }
 
 .container-pink {
