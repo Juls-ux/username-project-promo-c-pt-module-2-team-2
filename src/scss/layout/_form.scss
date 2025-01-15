@@ -135,21 +135,6 @@ main {
         font-weight: 300;
     }
     &_button {
-<<<<<<< HEAD
-        text-align: center;
-
-        @include tablet{
-            text-align: left;
-        }
-    }
-    &_buttonSub {
-        background-color:#EB2A82;
-        color: white;
-        border: none;
-        height: 40px;
-        width: 200px
-=======
-        
         align-self: center;
         background-color:#EB2A82;
         color: white;
@@ -161,7 +146,7 @@ main {
         &:hover {
             background-color: #90D10B;
         }
->>>>>>> main
+
     }
     &_paragraph {
         font-size: 14px;
@@ -224,18 +209,13 @@ main {
 }
 
 .container {
-    justify-content: center;
     align-items: center;
     padding: 10px;
     text-align: center; 
-<<<<<<< HEAD
-=======
     margin-bottom: 40px;
     max-width: 100%; 
     box-shadow: 4px 4px 10px #3f3f3f5c;
   
->>>>>>> main
-
         @include tablet{
             height: 600px;
             padding-inline: 10px;
