@@ -139,7 +139,6 @@ main {
         font-weight: 300;
     }
     &_button {
-        
         align-self: center;
         background-color:#EB2A82;
         color: white;
@@ -151,6 +150,7 @@ main {
         &:hover {
             background-color: #90D10B;
         }
+
     }
     &_paragraph {
         font-size: 14px;
@@ -172,7 +172,6 @@ main {
     &_colorsul{
         display: flex;
         flex-direction: row;
-
         justify-content: space-between;
         align-items: center;
         text-align: center;
@@ -221,7 +220,6 @@ main {
     box-shadow: 4px 4px 10px #3f3f3f5c;
     height: auto;
   
-
         @include tablet{
             
             padding-inline: 10px;
@@ -236,7 +234,6 @@ main {
             padding-block: 15px;
             justify-content: left;
         }
-
     &_img {
         max-width: 350px;
         height: auto;
@@ -283,14 +280,12 @@ main {
     background-color:#eb2a8152;
     box-shadow: 4px 4px 10px #eb2a8152;
     font-weight: 600;
-    
 }
 
 .container-purple {
     background-color:#8547e85c;
     box-shadow: 4px 4px 10px #8547e85c;
-    font-weight: 600;
-    
+    font-weight: 600; 
 }
 
 .container-orange {
@@ -304,23 +299,21 @@ main {
 }
 
 .categoryTextGreen {
-
     color: #90D10B;
     font-size: 17px;
 }
-.categoryTextPink {
 
+.categoryTextPink {
     color:#EB2A82;
     font-size: 17px;
 }
-.categoryTextPurple {
 
+.categoryTextPurple {
     color:#8547E8;
     font-size: 17px;
 }
 
 .categoryTextOrange {
-
     color:#FC9A7C;
     font-size: 17px;
 }
@@ -341,13 +334,13 @@ main {
     transition: transform 0.8s ease;
 }
 
-
 .colorPalette {
     border: none;
     width: 45px;
     height: 45px;
     border-radius: 15px;
 }
+
 .colorLi {
     list-style: none;
 }
@@ -360,14 +353,26 @@ main {
 }
 
 .list{
-   margin-bottom: 25px;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
+.listProduct {
+    list-style: none;
+    display: grid;
 
+    @include tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 .list_Delet {
     align-self: center;
     background-color:#000000;
     color: white;
     border: none;
-    height: 45px;
-    width: 300px;
+    height: 40px;
+    width: 200px;
+    text-align: center;
 }
+
+

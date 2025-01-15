@@ -12,7 +12,9 @@
           alt="flecha desplegable"
         />
       </h3>
-      <p class="form_texto-explicativo">Rellena aquí los datos del producto que deseas vender.</p>
+      <p class="form_texto-explicativo">
+        Rellena aquí los datos del producto que deseas vender.
+      </p>
       <div class="js_form1 form">
         <label class="form_file" for="imageUpload"
           >Selecciona tu imagen<span class="form_span">*</span></label
@@ -64,7 +66,9 @@
           alt="flecha desplegable"
         />
       </h3>
-      <p class="form_texto-explicativo">Rellena aquí tu información y datos de contacto.</p>
+      <p class="form_texto-explicativo">
+        Rellena aquí tu información y datos de contacto.
+      </p>
       <div class="js_form2 form display">
         <label class="form_label" for="name">
           Nombre Completo<span class="form_span">*</span></label
@@ -89,7 +93,9 @@
           placeholder="XyZ@mail.com"
           required
         />
-        <label class="form_label" for="phone">Teléfono</label>
+        <label class="form_label" for="phone"
+          >Teléfono<span class="form_span">*</span></label
+        >
         <input
           class="js_inputPhone form_input"
           class="form_phone"
@@ -114,35 +120,35 @@
       <p class="js_cardPrice container_price">0,00€</p>
       <p class="js_cardName container_name">Nombre del producto:</p>
       <p class="js_sellerName container_seller">Nombre del vendedor:</p>
-      
+
       <section class="container_icon-section">
         <img
-        class="js_iconEmail container_iconContact"
-        src="../images/mail-icon.svg"
-        alt="icono email"
-      />
-      <img
-        class="js_iconPhone container_iconContact"
-        src="../images/call-icon.svg"
-        alt="icono telefono"
-      />
-
+          class="js_iconEmail container_iconContact"
+          src="../images/mail-icon.svg"
+          alt="icono email"
+        />
+        <img
+          class="js_iconPhone container_iconContact"
+          src="../images/call-icon.svg"
+          alt="icono telefono"
+        />
       </section>
     </div>
   </section>
-  <div>
+  <section class="form_button">
     <input
-      class="js_button form_button"
+      class="js_button form_buttonSub"
       type="submit"
       value="AÑADIR PRODUCTO"
     />
-    <div class="border"></div>
-    <h3 class="list">TUS PRODUCTOS</h3>
-    <ul class="js_productList listProduct"></ul>
-    <input
-      class="js_buttonDelet list_Delet"
-      type="submit"
-      value="BORRAR PRODUCTOS"
-    />
-  </div>
+    <div class="border">
+      <h3 class="list">TUS PRODUCTOS</h3>
+      <ul class="js_productList listProduct"></ul>
+      <input
+        class="js_buttonDelet list_Delet"
+        type="butt"
+        value="BORRAR PRODUCTOS"
+      />
+    </div>
+  </section>
 </main>
