@@ -1,12 +1,16 @@
 <main>
   <section class="section">
+    
     <form>
+      <h2 class="section_h2">Sube aqui tu producto 💕</h2>
+      <p class="section_text" >Aquí puedes introducir todos los datos de tu producto. Te ayudaremos a venderlo de la manera más rápida y eficaz!
+      </p>
       <h3 class="form_title">
         <img
           class="form_image_1"
           src="../images/icono-datos-de-producto.svg"
           alt="icono producto"
-        />DATOS DEL PRODUCTO<img
+        />Datos de tu producto<img
           class="js_form_arrow1 form_arrow"
           src="../images/angle-down.svg"
           alt="flecha desplegable"
@@ -54,6 +58,7 @@
           placeholder="Ejem: Silla STYRSPEL de Ikea"
           required
         />
+        <h4 class="form_h4">💡 La categoría de tu producto es importante, un futuro comprador te encontrará más fácilmente.</h4>
 
         <div>
           <ul class="js_colorsUl form_colorsul"></ul>
@@ -65,7 +70,7 @@
           src="../images/icono-datos-de-vendedor.svg"
           alt="icono vendedor"
         />
-        CONTACTO DEL VENDEDOR<img
+        Tus datos de contacto<img
           class="js_form_arrow2 form_arrow"
           src="../images/flecha-abajo.svg"
           alt="flecha desplegable"
@@ -127,7 +132,7 @@
     <div class="js_ProductContainer container">
       <img
         class="js_cardImage container_img"
-        src="../images/general-img-portrait.png"
+        src="../images/adalab-placeholder.svg"
         alt="Placeholder"
       />
       <p class="js_cardPrice container_price">0,00€</p>
@@ -148,7 +153,15 @@
       </section>
     </div>
   </section>
-  <section>
+
+  <div class="border">
+    <section class="border_tus-productos">
+      <img class="border_icon-black" src="../images/oveja-negra.svg" alt="icono oveja negra">
+      <h3 class="list">Tu lista de productos:</h3>
+    </section>
+
+    <ul class="js_productList listProduct"></ul>
+
     <input
       class="js_button form_button"
       type="submit"
