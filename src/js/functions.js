@@ -13,8 +13,10 @@ let arrayOfProducts = [];
 
 button.addEventListener("click", (ev) => {
   ev.preventDefault();
-  createProduct();
-  renderAllProducts(arrayOfProducts);
+  if (valiFields()) {
+    createProduct();
+    renderAllProducts(arrayOfProducts);
+  }
 });
 
 buttonDelet.addEventListener("click", (ev) => {
@@ -27,7 +29,7 @@ buttonDelet.addEventListener("click", (ev) => {
 function createProduct() {
   const imageUrl = document.getElementById("imageUpload").value;
   const price = document.getElementById("number").value;
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("nameProduct").value;
 
   const product = {
     id: Date.now(),
