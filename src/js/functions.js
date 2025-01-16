@@ -56,9 +56,9 @@ function createProduct() {
 }
 
 function renderOneProduct(objProduct) {
-  return `<li class="container">
+  return `<li class="container-list">
                 <span class="container_erase js_cardsEraser" data-id="${objProduct.field2}">X</span>
-                <img src="${objProduct.photo}" class="container_img" 
+                <img src="${objProduct.photo}" class="container_img-2" 
                 alt="product image ${objProduct.field4}"/>
                 <p class="container_price">${objProduct.field3}</p>
                 <p class="container_name">${objProduct.field4}</p>

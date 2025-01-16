@@ -192,6 +192,23 @@ main {
             background-color: #90D10B;
         }
     }
+
+    &_button-x{
+        align-self: center;
+        background-color:#000000;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        margin-bottom: 50px;
+       
+        align-items: center;
+        
+        &:hover {
+            background-color: #90D10B;
+        }
+    }
     &_paragraph {
         font-size: 14px;
         margin-bottom: 45px;
@@ -288,7 +305,18 @@ main {
             justify-content: left;
         }
     &_img {
-        width: 350px;
+        width: 150px;
+        height: auto;
+        margin-bottom: 0px;   
+        @include tablet {
+            width: 350px;
+            height: auto;
+            margin-bottom: 40px;  
+        }     
+    }
+    &_img-2{
+     
+        align-items: start;
         height: auto;
         margin-bottom: 40px;        
     }
@@ -410,6 +438,7 @@ main {
     width: 100%;
     &_tus-productos{
         display: flex;
+        align-items: center;
         gap: 10px;
         margin-bottom:40px ;
         text-transform: uppercase;
@@ -423,17 +452,16 @@ main {
 
 }
 
-.list{
-    font-size: 26px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.list_Product {
+
+.list_Product, .listProduct {
     list-style: none;
     display: grid;
     gap: 40px;
 
-    @include tablet{
+   @include tablet{
+        grid-template-columns: 1fr 1fr;
+    }
+    @include desktop{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -454,4 +482,23 @@ main {
 
 }
 
+
+.container-list {
+    align-items: center;
+    padding: 15px;
+    text-align: center; 
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 10px #3f3f3f5c;
+    width: 300px;
+    height: auto;
+    @include tablet{
+            
+            padding-inline: 10px;
+            padding-block: 10px;
+            justify-content: right;
+            width: 300px;
+            height: auto;
+        }
+
+}
 
