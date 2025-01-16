@@ -8,6 +8,7 @@ main {
    padding-inline: 30px;
    padding-block: 50px;
    background-color: rgba(0, 0, 0, 0.02);
+   background-image: linear-gradient(#8fd10b08, #eb2a8119);
 
     @include tablet{
        
