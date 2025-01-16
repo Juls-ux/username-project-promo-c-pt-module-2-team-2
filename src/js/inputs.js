@@ -66,15 +66,14 @@ inputPrice.addEventListener('input', handleInputPrice);
 
 const handleInputProduct = (ev) => {
     const prodValue = inputProduct.value;
-    nameCard.innerHTML = inputProduct.value;
+    nameCard.innerHTML = prodValue;
 }; 
 
 inputProduct.addEventListener('input', handleInputProduct);
 
 const handleSellerName = (ev) => {
   const sellerValue = sellerName.value;
-  sellerNameCard.innerHTML = sellerName.value;
+  sellerNameCard.innerHTML = sellerValue;
 }; 
 
-<<<<<<< HEAD
-inputProduct.addEventListener('input', handleInputProduct);
+sellerName.addEventListener('input', handleSellerName);
