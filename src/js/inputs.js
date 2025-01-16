@@ -76,5 +76,5 @@ const handleSellerName = (ev) => {
   sellerNameCard.innerHTML = sellerName.value;
 }; 
 
-<<<<<<< HEAD
+
 inputProduct.addEventListener('input', handleInputProduct);
