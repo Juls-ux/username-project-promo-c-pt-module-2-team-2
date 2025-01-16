@@ -89,7 +89,7 @@ function renderAllProducts(arrayOfProducts) {
   }
   productList.innerHTML = html;
   attachClickEventsToEraserCards();
-  localStorage.setItem("data", JSON.stringify(arrayOfProducts));
+  localStorage.setItem("product", JSON.stringify(arrayOfProducts));
 }
 
 function attachClickEventsToEraserCards() {
