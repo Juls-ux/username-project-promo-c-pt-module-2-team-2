@@ -81,6 +81,9 @@ main {
         font-size: 18px;
         gap: 15px;
     }
+    &_imgX {
+        width: 30px;
+    }
     &_title{
         margin-top: 50px;
         font-size: 14px;
@@ -539,7 +542,12 @@ main {
 }
 
 .button-x{ 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
     align-self: center;
+    text-decoration: none;
+    gap: 5px;
     background-color:#000000;
     color: white;
     border: none;
