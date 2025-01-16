@@ -25,6 +25,7 @@ main {
     text-align: center;
     border: solid 0.4px rgb(182, 182, 182);
     padding: 25px;
+    background-image:url(/src/images/oveja-negra.svg);
    
     @include tablet{
     justify-content: left;
@@ -266,7 +267,8 @@ main {
     &_img {
         width: 350px;
         height: auto;
-        
+        margin-bottom: 40px;        
+    
     }
 
     &_price{
@@ -275,16 +277,19 @@ main {
         font-weight: 600;
         text-align: left;
         margin-top: 20px;
+        margin-inline: 30px;
     }
     &_name {
         font-size: 20px;
         font-weight: 600;
         text-align: left;
+        margin-inline: 30px;
     }
 
     &_seller {
         font-size: 16px;
         font-weight: 600;
+        margin-inline: 30px;
         text-align: left;
         margin-top: 60px;
     }
@@ -294,6 +299,7 @@ main {
         flex-direction: row;
         gap: 25px;
         margin-top: 20px;
+        margin-inline: 30px;
     }
 }
 
