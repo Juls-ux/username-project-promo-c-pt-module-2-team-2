@@ -34,10 +34,13 @@ main {
     }
 
     &_h2{
-        font-size: 30px;
+        font-size: 20px;
         color:#EB2A82;
-        @include mobile {
-            font-size: 26px;
+
+
+
+        @include tablet {
+            font-size: 30px;
         }
     }
     &_text{
@@ -192,6 +195,23 @@ main {
             background-color: #90D10B;
         }
     }
+
+    &_button-x{
+        align-self: center;
+        background-color:#000000;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        margin-bottom: 50px;
+       
+        align-items: center;
+        
+        &:hover {
+            background-color: #90D10B;
+        }
+    }
     &_paragraph {
         font-size: 14px;
         margin-bottom: 45px;
@@ -213,10 +233,13 @@ main {
         display: flex;
         flex-direction: row;
         justify-content:flex-start;
-        gap: 40px;
+        gap: 15px;
         align-items: center;
         text-align: center;
         margin-bottom: 30px;
+        @include tablet {
+            gap: 40px;
+        }
     }
 
     &_green {
@@ -250,17 +273,24 @@ main {
     &_texto-explicativo{
         font-size: 14px;
         margin-block: 15px;
+        margin-inline: 100px;
+        @include tablet{
+            margin-inline: 0px;
+        }
     }
+
     &_h4{
         width: 400px;
         font-weight: 500;
         color: gray;
         font-size: 16px;
+
         @include mobile {
           
             font-size: 16px;
-            padding-inline:110px;
+            padding-inline:40px;
             text-align: center;
+            padding-bottom: 20px;
         }
     }
 }
@@ -288,9 +318,32 @@ main {
             justify-content: left;
         }
     &_img {
-        width: 350px;
+        width: 150px;
         height: auto;
-        margin-bottom: 40px;        
+        margin-bottom: 0px;   
+        @include tablet {
+            width: 350px;
+            height: auto;
+            margin-bottom: 40px;  
+        }     
+    }
+    &_img-2{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 0px;   
+        @include tablet {
+            width: 150px;
+            height: auto;
+            margin-bottom: 40px;  
+        }         
+    }
+    &_erase{
+        background-color:#90D10B;
+        margin-block: 20px;
+        color: white;
+        padding-block: 5px;
+        padding-inline: 15px;
+        border-radius: 5px;
     }
 
     &_price{
@@ -349,6 +402,7 @@ main {
     background-color:#fc9a7c7f;
     box-shadow: 4px 4px 10px #fc9a7c7f;;
     font-weight: 600;
+   
 }
 
 .categoryText{
@@ -357,22 +411,34 @@ main {
 
 .categoryTextGreen {
     color: #90D10B;
-    font-size: 17px;
+    font-size: 15.6px;
+    @include tablet {
+        font-size: 17px;
+    }
 }
 
 .categoryTextPink {
     color:#EB2A82;
-    font-size: 17px;
+    font-size: 15.6px;
+    @include tablet {
+        font-size: 17px;
+    }
 }
 
 .categoryTextPurple {
     color:#8547E8;
-    font-size: 17px;
+    font-size: 15.6px;
+    @include tablet {
+        font-size: 17px;
+    }
 }
 
 .categoryTextOrange {
     color:#FC9A7C;
-    font-size: 17px;
+    font-size: 15.6px;
+    @include tablet {
+        font-size: 17px;
+    }
 }
  
 .display {
@@ -410,6 +476,7 @@ main {
     width: 100%;
     &_tus-productos{
         display: flex;
+        align-items: center;
         gap: 10px;
         margin-bottom:40px ;
         text-transform: uppercase;
@@ -423,17 +490,20 @@ main {
 
 }
 
-.list{
-    font-size: 26px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.list_Product {
+
+.list_Product, .listProduct {
     list-style: none;
     display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    place-items: center;
     gap: 40px;
 
-    @include tablet{
+
+   @include tablet{
+        grid-template-columns: 1fr 1fr;
+    }
+    @include desktop{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -454,4 +524,25 @@ main {
 
 }
 
+
+.container-list {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 15px;
+    text-align: center; 
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 10px #3f3f3f5c;
+    width: 300px;
+    height: auto;
+    @include tablet{
+            
+            padding-inline: 10px;
+            padding-block: 10px;
+            justify-content: right;
+            width: 300px;
+            height: auto;
+        }
+
+}
 

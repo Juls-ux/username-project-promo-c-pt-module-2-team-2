@@ -127,8 +127,7 @@ const handlerColourChange = (ev) => {
     }
   
   }
-
-
+  
 //FUNCIONES
 renderAllColors();
 

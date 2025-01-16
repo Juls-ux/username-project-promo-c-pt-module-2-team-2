@@ -47,9 +47,10 @@
 
         }
     }
+
     &_selection{
       
-        padding: 40px;
+        padding: 20px;
         border: solid 3px #EB2A82;;
         border-radius: 30px;
         display: flex;
@@ -67,18 +68,6 @@
         }
         
     }
-    @include mobile{
-        &_Img{
-            width: 262px;
-        }   
-    }
-    &_Slg{
-        font-size: 20px;
-    }
-    &_Txt{
-        font-size: 16px;
-        margin-inline: 0px;  
-    }
 
 }
 .form_button{
@@ -91,9 +80,6 @@
     width: 300px;
     
 
-    @include mobile {
-        
-    }
 }
 
 @include mobile{
@@ -103,11 +89,11 @@
                 width: 262px;
             }                              
             &_Slg{
-                font-size: 34px;
+                font-size: 24px;
                 padding-inline:15px;
             }
             &_Txt{
-                font-size: 18px;
+                font-size: 14px;
                 padding-inline: 15px;
                 margin-inline: 0px;  
                 margin-block: 0px
