@@ -543,11 +543,11 @@ main {
 
 .button-x{ 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-self: center;
     text-decoration: none;
-    gap: 5px;
+    gap: 15px;
     background-color:#000000;
     color: white;
     border: none;
