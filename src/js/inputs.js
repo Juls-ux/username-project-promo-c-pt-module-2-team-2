@@ -14,10 +14,6 @@ const sellerName = document.querySelector('.js_inputName');
 const sellerEmail = document.querySelector('.js_inputEmail');
 const sellerPhone = document.querySelector('.js_inputPhone');
 
-//     BOTONES y LISTA
-
-const addBtn = document.querySelector('.js_button');
-const deleteBtn = document.querySelector('.js_buttonDelete');
 
 //     IMAGEN 
 
@@ -29,6 +25,7 @@ const imgCard = document.querySelector('.js_cardImage');
 const priceCard = document.querySelector('.js_cardPrice');
 const nameCard = document.querySelector('.js_cardName');
 const emailCard = document.querySelector('.js_iconEmail');
+const sellerNameCard = document.querySelector('.js_sellerName')
 
 
 //     EVENTOS Y FUNCIONES 
@@ -74,14 +71,11 @@ const handleInputProduct = (ev) => {
 
 inputProduct.addEventListener('input', handleInputProduct);
 
+const handleSellerName = (ev) => {
+  const sellerValue = sellerName.value;
+  sellerNameCard.innerHTML = sellerName.value;
+}; 
 
-const handleDeleteBtn = (ev) => {
-    ev.preventDefault();
+inputProduct.addEventListener('input', handleInputProduct);
 
-    prodList = [];
-    prodList.innerHTML = '';
-    localStorage.removeItem('prodList');
-};
-
-deleteBtn.addEventListener('click', handleDeleteBtn)
 
