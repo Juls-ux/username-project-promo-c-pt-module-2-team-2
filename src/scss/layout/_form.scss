@@ -15,7 +15,7 @@ main {
         grid-template-columns: 60% 40%;
     }
     @include desktop{
-        margin-inline: 85px;
+        padding-inline: 150px;
     }
 }
 
@@ -157,6 +157,7 @@ main {
         height: 45px;
         width: 300px;
         font-size: 16px;
+        margin-bottom: 50px;
        
         align-items: center;
         
@@ -361,7 +362,7 @@ main {
 
     margin-top: 40px;
     margin-bottom: 25px;
-    border-top: 2px solid #EB2A82;
+    //border-top: 2px solid #EB2A82;
     width: 100%;
     @include tablet {
         margin-top: 80px;
@@ -376,19 +377,27 @@ main {
 .listProduct {
     list-style: none;
     display: grid;
+    gap: 40px;
 
     @include tablet{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 .list_Delet {
-    align-self: center;
-    background-color:#000000;
-    color: white;
-    border: none;
-    height: 40px;
-    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    margin-top: 30px;
+        background-color:#000000;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        margin-bottom: 50px;
+
 }
 
 
