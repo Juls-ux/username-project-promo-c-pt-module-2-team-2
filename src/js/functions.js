@@ -5,6 +5,7 @@ const productList = document.querySelector(".js_productList");
 const button = document.querySelector(".js_button");
 const buttonDelet = document.querySelector(".js_buttonDelet");
 const cardImage = document.querySelector(".js_cardImage");
+const buttonXShare = document.querySelector(".js_buttonXShare");
 
 
 // ARRAY
@@ -16,8 +17,22 @@ let arrayOfProducts = [];
 button.addEventListener("click", (ev) => {
   ev.preventDefault();
   if (valiFields()) {
-    createProduct();
+    const data = createProduct();
+    createArrayOfProducts(data);
     renderAllProducts(arrayOfProducts);
+    fetch('https://dev.adalab.es/api/info/data', {
+  
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data),  
+})  
+  .then(response => response.json())  
+  .then(responseData => {  
+  console.log(responseData)
+  buttonXShare.innerHTML = `<a href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>  
+    <a class="shareButton" href="https://twitter.com/intent/tweet?">Compartir en X</a>`;
+
+});
   }
 });
 
@@ -36,11 +51,8 @@ function createProduct() {
   const nameSeller = document.getElementById("nameVendor").value;
   const telephone = document.getElementById("phone").value;
   const emailContact = document.getElementById("email").value;
-
   
-
-
-  const data = {
+  const product = {
     field1: number,
     field2: Date.now(),
     field3: price,
@@ -51,9 +63,14 @@ function createProduct() {
     photo: imageUrl,
   };
 
-  arrayOfProducts.push(data);
+return product;
+
+};
+  
+function createArrayOfProducts(product){
+  arrayOfProducts.push(product);
   console.log(arrayOfProducts);
-}
+};
 
 function renderOneProduct(objProduct) {
   return `<li class="container">
@@ -91,7 +108,7 @@ function attachClickEventsToEraserCards() {
       /*Si el índice es distinto de -1, significa que el objeto se encontró en el arrayOfProducts y lo eliminamos */
       if (index !== -1) {
         arrayOfProducts.splice(index, 1);
-        localStorage.setItem("data", JSON.stringify(arrayOfProducts));
+        localStorage.setItem("product", JSON.stringify(arrayOfProducts));
         renderAllProducts(arrayOfProducts);
       }
     });
@@ -99,7 +116,7 @@ function attachClickEventsToEraserCards() {
 }
 
 function getProductsLocalstorage() {
-  const savedProducts = JSON.parse(localStorage.getItem("data"));
+  const savedProducts = JSON.parse(localStorage.getItem("product"));
 
   if (Array.isArray(savedProducts)) {
     arrayOfProducts = savedProducts;
@@ -111,7 +128,7 @@ function getProductsLocalstorage() {
 }
 
 function removeProductsLocalStorage() {
-  localStorage.removeItem("data");
+  localStorage.removeItem("product");
   arrayOfProducts = [];
 }
 
