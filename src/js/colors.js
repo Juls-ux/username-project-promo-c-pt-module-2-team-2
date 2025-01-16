@@ -85,7 +85,7 @@ const handlerColourChange = (ev) => {
 
     // Eliminar clases de color anteriores
     ProductContainer.classList.remove('container-green', 'container-pink','container-purple', 'container-orange');
-    inputForm2.classList.remove("display-2");
+    
    
    
     const AllCategoryList =document.querySelectorAll('.js_colorLi');
@@ -108,16 +108,19 @@ const handlerColourChange = (ev) => {
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
         selectedLi.classList.add(selectedColor.textClassName);
-
+        
         inputForm2.classList.add("display-2");
         
         arrowDown2.classList.add("arrow-up");
+        
 
     } else {
         console.warn(`Categoría no encontrada: ${category}`);
+        
     }
   
   }
+
 
 //FUNCIONES
 renderAllColors();
