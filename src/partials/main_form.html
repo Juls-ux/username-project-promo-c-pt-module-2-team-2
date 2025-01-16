@@ -1,20 +1,32 @@
 <main>
   <section class="section">
+    
     <form>
+      <h2 class="section_h2">¡Sube aquí tus productos! 💕</h2>
+      <p class="section_text" >Aquí puedes introducir todos los datos de tu producto. Te ayudaremos a venderlo de la manera más rápida y eficaz!
+      </p>
       <h3 class="form_title">
         <img
           class="form_image_1"
           src="../images/icono-datos-de-producto.svg"
           alt="icono producto"
-        />DATOS DEL PRODUCTO<img
+        />Datos de tu producto<img
           class="js_form_arrow1 form_arrow"
           src="../images/angle-down.svg"
           alt="flecha desplegable"
         />
       </h3>
+      <p class="form_texto-explicativo">
+        Rellena aquí los datos del producto que deseas vender.
+      </p>
       <div class="js_form1 form">
         <label class="form_file" for="imageUpload"
-          >Selecciona tu imagen<span class="form_span">*</span></label
+          >Selecciona tu imagen<span
+            class="form_span"
+            id="spanImage"
+            tabindex="0"
+            >*</span
+          ></label
         >
         <input
           type="file"
@@ -35,17 +47,18 @@
           placeholder="Ejem: 25,50€"
           required
         />
-        <label class="form_label" for="name"
+        <label class="form_label" for="nameProduct"
           >Nombre del producto<span class="form_span">*</span></label
         >
         <input
           class="js_inputProduct form_input"
-          name="name"
+          name="nameProduct"
           type="text"
-          id="name"
+          id="nameProduct"
           placeholder="Ejem: Silla STYRSPEL de Ikea"
           required
         />
+        <h4 class="form_h4">💡<br> La categoría de tu producto es importante, un futuro comprador te encontrará más fácilmente 👀</br> </h4>
 
         <div>
           <ul class="js_colorsUl form_colorsul"></ul>
@@ -57,21 +70,24 @@
           src="../images/icono-datos-de-vendedor.svg"
           alt="icono vendedor"
         />
-        CONTACTO DEL VENDEDOR<img
+        Tus datos de contacto<img
           class="js_form_arrow2 form_arrow"
           src="../images/flecha-abajo.svg"
           alt="flecha desplegable"
         />
       </h3>
+      <p class="form_texto-explicativo">
+        Rellena aquí tu información y datos de contacto.
+      </p>
       <div class="js_form2 form display">
-        <label class="form_label" for="name">
+        <label class="form_label" for="nameVendor">
           Nombre Completo<span class="form_span">*</span></label
         >
         <input
           class="js_inputName form_input"
-          name="name"
+          name="nameVendor"
           type="text"
-          id="name"
+          id="nameVendor"
           placeholder="María...."
           required
         />
@@ -87,7 +103,9 @@
           placeholder="XyZ@mail.com"
           required
         />
-        <label class="form_label" for="phone">Teléfono</label>
+        <label class="form_label" for="phone"
+          >Teléfono<span class="form_span">*</span></label
+        >
         <input
           class="js_inputPhone form_input"
           class="form_phone"
@@ -100,43 +118,58 @@
       <p class="form_paragraph">
         <span class="form_span">*</span>Campos obligatorios
       </p>
+
+      <section>
+        <input
+          class="js_button form_buttonSub"
+          type="submit"
+          value="AÑADIR PRODUCTO"
+        />
+      </section>
     </form>
   </section>
   <section class="section">
-    <div class="js_ProductContainer container">
+    <div class="js_ProductContainer container" data-number="">
       <img
         class="js_cardImage container_img"
-        src="../images/7100TzCYGNL.__AC_SX300_SY300_QL70_ML2_.jpg"
-        alt="silla rosa"
+        src="../images/adalab-placeholder.svg"
+        alt="Placeholder"
       />
-      <p class="js_cardPrice container_price">Precio del producto:</p>
+      <p class="js_cardPrice container_price">0,00€</p>
       <p class="js_cardName container_name">Nombre del producto:</p>
       <p class="js_sellerName container_seller">Nombre del vendedor:</p>
-      <img
-        class="js_iconEmail iconContact"
-        src="../images/mail-icon.svg"
-        alt="icono email"
-      />
-      <img
-        class="js_iconPhone iconContact"
-        src="../images/call-icon.svg"
-        alt="icono telefono"
+
+      <section class="container_icon-section">
+        <img
+          class="js_iconEmail container_iconContact"
+          src="../images/mail-icon.svg"
+          alt="icono email"
+        />
+        <img
+          class="js_iconPhone container_iconContact"
+          src="../images/call-icon.svg"
+          alt="icono telefono"
+        />
+      </section>
+    </div>
+  </section>
+
+  <div class="border">
+    <section class="border_tus-productos">
+      <img class="border_icon-black" src="../images/oveja-negra.svg" alt="icono oveja negra">
+      <h3 class="list">Tu lista de productos:</h3>
+    </section>
+
+    <ul class="js_productList listProduct"></ul>
+
+    <div class="border">
+      <h3 class="list">TUS PRODUCTOS</h3>
+      <ul class="js_productList list_Product"></ul>
+      <input
+        class="js_buttonDelet list_Delet"
+        type="button"
+        value="BORRAR PRODUCTOS"
       />
     </div>
   </section>
-  <div>
-    <input
-      class="js_button form_button"
-      type="submit"
-      value="AÑADIR PRODUCTO"
-    />
-    <div class="border"></div>
-    <h3 class="list">TUS PRODUCTOS</h3>
-    <ul class="js_productList listProduct"></ul>
-    <input
-      class="js_buttonDelet list_Delet"
-      type="submit"
-      value="BORRAR PRODUCTOS"
-    />
-  </div>
 </main>

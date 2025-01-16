@@ -17,6 +17,5 @@ arrowDown1.addEventListener("click", (ev) => {
 arrowDown2.addEventListener("click", (ev) => {
   inputForm2.classList.toggle("display");
   arrowDown2.classList.toggle("arrow-up");
+  console.log(inputForm2);
 });
-
-

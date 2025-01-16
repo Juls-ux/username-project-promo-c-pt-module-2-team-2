@@ -76,6 +76,18 @@ const handleSellerName = (ev) => {
   sellerNameCard.innerHTML = sellerName.value;
 }; 
 
+<<<<<<< HEAD
 inputProduct.addEventListener('input', handleInputProduct);
 
+=======
+/*const handleDeleteBtn = (ev) => {
+    ev.preventDefault();
+
+    prodList = [];
+    prodList.innerHTML = '';
+    localStorage.removeItem('prodList');
+};
+
+deleteBtn.addEventListener('click', handleDeleteBtn)*/
+>>>>>>> f387670d22578f0fcf8853d60471bbb0528b6885
 
