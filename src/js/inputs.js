@@ -14,10 +14,6 @@ const sellerName = document.querySelector('.js_inputName');
 const sellerEmail = document.querySelector('.js_inputEmail');
 const sellerPhone = document.querySelector('.js_inputPhone');
 
-//     BOTONES y LISTA
-
-const addBtn = document.querySelector('.js_button');
-const deleteBtn = document.querySelector('.js_buttonDelete');
 
 //     IMAGEN 
 
@@ -29,6 +25,7 @@ const imgCard = document.querySelector('.js_cardImage');
 const priceCard = document.querySelector('.js_cardPrice');
 const nameCard = document.querySelector('.js_cardName');
 const emailCard = document.querySelector('.js_iconEmail');
+const sellerNameCard = document.querySelector('.js_sellerName')
 
 
 //     EVENTOS Y FUNCIONES 
@@ -69,19 +66,25 @@ inputPrice.addEventListener('input', handleInputPrice);
 
 const handleInputProduct = (ev) => {
     const prodValue = inputProduct.value;
-    nameCard.innerHTML = inputProduct.value;
+    nameCard.innerHTML = prodValue;
 }; 
 
 inputProduct.addEventListener('input', handleInputProduct);
 
+const handleSellerName = (ev) => {
+  const sellerValue = sellerName.value;
+  sellerNameCard.innerHTML = sellerValue;
+}; 
 
-/*const handleDeleteBtn = (ev) => {
-    ev.preventDefault();
+sellerName.addEventListener('input', handleSellerName);
 
-    prodList = [];
-    prodList.innerHTML = '';
-    localStorage.removeItem('prodList');
+const emailInput = document.querySelector('.js_inputEmail');
+const emailPreview = document.querySelector('.js_iconEmail');
+
+
+const handleEmail = (ev) => {
+  const email = ev.currentTarget.value;
+  emailPreview.setAttribute('href', `mailto:${email}`)
 };
 
-deleteBtn.addEventListener('click', handleDeleteBtn)*/
-
+emailInput.addEventListener('input', handleEmail);
