@@ -23,6 +23,8 @@ main {
     display: flex; 
     justify-content: center; 
     text-align: center;
+    border: solid 0.4px rgb(182, 182, 182);
+    padding: 25px;
    
     @include tablet{
     justify-content: left;
@@ -34,6 +36,7 @@ main {
     font-size: 14px;
     display: grid;
     gap:10px;
+  
     @include mobile {
         place-items: center;
     }
@@ -285,7 +288,7 @@ main {
     background-color: #8fd10b51;
     box-shadow: 4px 4px 10px #49680a61;
     font-weight: 600;
-    background: linear-gradient(to bottom, #8fd10b51 50%, #8fd10b78 50%);
+    
 
 }
 
@@ -364,13 +367,11 @@ main {
     margin-bottom: 25px;
     //border-top: 2px solid #EB2A82;
     width: 100%;
-    @include tablet {
-        margin-top: 80px;
-    }
+
 }
 
 .list{
-    font-size: 16px;
+    font-size: 26px;
     margin-top: 25px;
     margin-bottom: 25px;
 }
