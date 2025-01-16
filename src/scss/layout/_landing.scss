@@ -2,16 +2,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
+
+
 .landing{
-    margin:30px;
+    height: 100vh;
+    background-image: url('/images/wallapop-recicla-anuncios.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Poppins";
     text-align: center;
+    
     &_header{
+        background-color: rgba(255, 255, 255, 0.924);
+        padding-block: 80px;
+        border-radius: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -27,33 +39,61 @@
             margin-bottom: 20px;
         }
         &_Txt{
-            font-size: 18px;
-            color: #383838;   
+            font-size: 24px;
+            color: #000000;   
             margin-inline: 150px; 
-            font-weight: 300;    
+            font-weight: 400;  
+            margin-block: 40px;
+
         }
     }
     &_selection{
+      
+        padding: 40px;
+        border: solid 3px #EB2A82;;
+        border-radius: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 100px;
         margin: 30px;
         font-size: 16px;
+        
 
         &_ImgSell{
             margin-bottom: 15.1px;
 
+
         }
         
+    }
+    @include mobile{
+        &_Img{
+            width: 262px;
+        }   
+    }
+    &_Slg{
+        font-size: 20px;
+    }
+    &_Txt{
+        font-size: 16px;
+        margin-inline: 0px;  
     }
 
 }
 .form_button{
+    margin-block: 40px;
     font-size: 18px;
     font-weight: bold;
     font-family: "Poppins";
     background-color: #EB2A82;
+    height: 45px;
+    width: 300px;
+    
+
+    @include mobile {
+        
+    }
 }
 
 @include mobile{
@@ -63,16 +103,21 @@
                 width: 262px;
             }                              
             &_Slg{
-                font-size: 20px;
+                font-size: 34px;
+                padding-inline:15px;
             }
             &_Txt{
-                font-size: 16px;
+                font-size: 18px;
+                padding-inline: 15px;
                 margin-inline: 0px;  
+                margin-block: 0px
             }
         }
     }
     .form_button{
-        font-size: 18px;       
+        font-size: 18px;  
+        height: 45px;
+        width: 300px;     
     }
 }
 

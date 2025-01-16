@@ -10,7 +10,7 @@ main {
    background-color: rgba(0, 0, 0, 0.02);
 
     @include tablet{
-        margin-inline: 35px;
+       
         display: grid;
         grid-template-columns: 60% 40%;
     }
@@ -35,12 +35,21 @@ main {
     &_h2{
         font-size: 36px;
         color:#EB2A82;
+        @include mobile {
+            font-size: 26px;
+        }
     }
     &_text{
 
         width: 600px;
         font-size: 18px;
         margin-block: 30px;
+        @include mobile {
+          
+            font-size: 16px;
+            padding-inline:100px;
+            text-align: center;
+        }
     }
 }
 
@@ -245,6 +254,12 @@ main {
         width: 600px;
         font-weight: 500;
         color: gray;
+        @include mobile {
+          
+            font-size: 16px;
+            padding-inline:110px;
+            text-align: center;
+        }
     }
 }
 
