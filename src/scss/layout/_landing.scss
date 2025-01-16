@@ -22,28 +22,28 @@
     
     &_header{
         background-color: rgba(255, 255, 255, 0.924);
-        padding-block: 80px;
+        padding-block: 30px;
         border-radius: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         &_Img{
-            margin-bottom: 30px;
-            width: 350px;
+            margin-bottom: 0px;
+            width: 250px;
         }
         &_Slg{
-            font-size: 30px;
+            font-size: 24px;
             font-weight: bold;
             color: #EB2A82;
             margin-bottom: 20px;
         }
         &_Txt{
-            font-size: 24px;
+            font-size: 18px;
             color: #000000;   
             margin-inline: 150px; 
             font-weight: 400;  
-            margin-block: 40px;
+            margin-block: 0px;
 
         }
     }
@@ -82,7 +82,7 @@
 
 }
 .form_button{
-    margin-block: 40px;
+    margin-block: 20px;
     font-size: 22px;
     font-weight: bold;
     font-family: "Poppins";
