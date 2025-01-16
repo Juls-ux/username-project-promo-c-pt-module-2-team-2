@@ -1,12 +1,18 @@
+
+  
 .footer {
+ 
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
     align-items: center;
+    bottom: 0;
     gap: 10px;
     padding-top: 20px;
     margin-bottom: 15px;
     border-top: solid 0.8px;
     background-color: white;
+ 
 
     &__logo-adalab {
         width: 120px;
