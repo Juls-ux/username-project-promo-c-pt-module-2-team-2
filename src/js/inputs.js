@@ -81,6 +81,19 @@ sellerName.addEventListener('input', handleSellerName);
 const emailInput = document.querySelector('.js_inputEmail');
 const emailPreview = document.querySelector('.js_iconEmail');
 
+const validEmail = validateEmail(emailInput);
+const validPhone = validateTelefono(emailPreview); 
+
+function validateEmail(email) {
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email);
+}
+
+function validateTelefono(telefono) {
+  const regex = /^\+?[0-9]{7,15}$/;
+  return regex.test(telefono);
+}
+
 
 const handleEmail = (ev) => {
   const email = ev.currentTarget.value;

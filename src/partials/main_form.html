@@ -140,11 +140,14 @@
       <p class="js_sellerName container_seller">Nombre del vendedor:</p>
 
       <section class="container_icon-section">
-        <img
-          class="js_iconEmail container_iconContact"
+        <a class="js_iconEmail" href="mailto:correo@example.com">
+          <img
+          class="container_iconContact"
           src="../images/mail-icon.svg"
           alt="icono email"
-        />
+          href
+          />
+        </a>
         <img
           class="js_iconPhone container_iconContact"
           src="../images/call-icon.svg"
@@ -166,7 +169,7 @@
       
       <ul class="js_productList list_Product"></ul>
       <input
-        class="js_buttonDelet list_Delet"
+        class="js_buttonDelet list_Delete"
         type="button"
         value="BORRAR PRODUCTOS"
       />
