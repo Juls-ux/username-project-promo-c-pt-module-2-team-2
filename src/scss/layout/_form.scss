@@ -24,7 +24,7 @@ main {
     display: flex; 
     justify-content: center; 
     text-align: center;
-    border: solid 0.4px rgb(182, 182, 182);
+   
     padding: 25px;
     background-image:url(/src/images/oveja-negra.svg);
    
@@ -42,8 +42,8 @@ main {
     }
     &_text{
 
-        width: 600px;
-        font-size: 18px;
+        width: 500px;
+        font-size: 16px;
         margin-block: 30px;
         @include mobile {
           
@@ -252,9 +252,10 @@ main {
         margin-block: 15px;
     }
     &_h4{
-        width: 600px;
+        width: 400px;
         font-weight: 500;
         color: gray;
+        font-size: 16px;
         @include mobile {
           
             font-size: 16px;
@@ -290,7 +291,6 @@ main {
         width: 350px;
         height: auto;
         margin-bottom: 40px;        
-    
     }
 
     &_price{
