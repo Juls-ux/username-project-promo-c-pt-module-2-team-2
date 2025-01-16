@@ -37,11 +37,9 @@ const handleImageUpload = (event) => {
       const reader = new FileReader();
   
       reader.onload = () => {
-        // Cambiar la imagen del contenedor
         imgCard.src = reader.result;
       };
-  
-      // Leer el archivo como una URL de imagen
+
       reader.readAsDataURL(file);
     }
 };
@@ -49,13 +47,12 @@ const handleImageUpload = (event) => {
 imageUpload.addEventListener('change', handleImageUpload);
 
 const handleInputPrice = (ev) => {
-    const priceValue = inputPrice.value.trim();  // Eliminar espacios alrededor del valor
-    const numericValue = parseFloat(priceValue); // Convertir el valor a un número flotante
+    const priceValue = inputPrice.value.trim();
+    const numericValue = parseFloat(priceValue);
     
     // Verificar si es un número válido
     if (!isNaN(numericValue) && numericValue >= 0) {
-        // Formatear el precio con dos decimales
-        priceCard.innerHTML = `${numericValue.toFixed(2)}€`;  // Mostrar con 2 decimales
+        priceCard.innerHTML = `${numericValue.toFixed(2)}€`;
     } else {
         priceCard.innerHTML = 'Precio no disponible';
     }
@@ -81,6 +78,10 @@ sellerName.addEventListener('input', handleSellerName);
 const emailInput = document.querySelector('.js_inputEmail');
 const emailPreview = document.querySelector('.js_iconEmail');
 
+const phoneInput = document.querySelector('.js_inputPhone');
+const phonePreview = document.querySelector('.js_iconPhone');
+
+
 const validEmail = validateEmail(emailInput);
 const validPhone = validateTelefono(emailPreview); 
 
@@ -99,5 +100,10 @@ const handleEmail = (ev) => {
   const email = ev.currentTarget.value;
   emailPreview.setAttribute('href', `mailto:${email}`)
 };
-
 emailInput.addEventListener('input', handleEmail);
+
+const handlePhone = (ev) => {
+  const telefono = ev.currentTarget.value;
+  phonePreview.setAttribute('href', `tel:${telefono}`)
+};
+phoneInput.addEventListener('input', handlePhone);
