@@ -36,11 +36,17 @@ main {
     &_h2{
         font-size: 20px;
         color:#EB2A82;
+       
+        align-items: center;
+        text-align: center;
 
 
 
         @include tablet {
             font-size: 30px;
+            align-items: left;
+        text-align: left;
+
         }
     }
     &_text{
@@ -51,7 +57,7 @@ main {
         @include mobile {
           
             font-size: 16px;
-            padding-inline:100px;
+           
             text-align: center;
         }
     }
@@ -196,26 +202,7 @@ main {
         }
     }
 
-    &_button-x{
-        align-self: center;
-        background-color:#000000;
-        color: white;
-        border: none;
-        height: 45px;
-        width: 300px;
-        font-size: 16px;
-        margin-bottom: 50px;
-       
-        align-items: center;
-        
-        &:hover {
-            background-color: #90D10B;
-        }
-    }
-    &_imgX{
-        width: 30px;
-        height: 30px;
-    }
+   
     &_paragraph {
         font-size: 14px;
         margin-bottom: 45px;
@@ -277,9 +264,9 @@ main {
     &_texto-explicativo{
         font-size: 14px;
         margin-block: 15px;
-        margin-inline: 100px;
+       
         @include tablet{
-            margin-inline: 0px;
+
         }
     }
 
@@ -357,6 +344,7 @@ main {
         text-align: left;
         margin-top: 20px;
         margin-inline: 30px;
+        
     }
     &_name {
         font-size: 20px;
@@ -550,3 +538,19 @@ main {
 
 }
 
+.button-x{ 
+    align-self: center;
+    background-color:#000000;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    margin-bottom: 50px;
+   
+    align-items: center;
+    
+    &:hover {
+        background-color: #90D10B;
+    }
+}
