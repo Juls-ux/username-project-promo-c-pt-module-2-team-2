@@ -77,3 +77,14 @@ const handleSellerName = (ev) => {
 }; 
 
 sellerName.addEventListener('input', handleSellerName);
+
+const emailInput = document.querySelector('.js_inputEmail');
+const emailPreview = document.querySelector('.js_iconEmail');
+
+
+const handleEmail = (ev) => {
+  const email = ev.currentTarget.value;
+  emailPreview.setAttribute('href', `mailto:${email}`)
+};
+
+emailInput.addEventListener('input', handleEmail);
