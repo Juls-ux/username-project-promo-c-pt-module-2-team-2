@@ -81,6 +81,7 @@ main {
         
         width: 24px;
         margin-inline: 15px;
+        color: #EB2A82;
         
         @include tablet{
             height: 16px;
@@ -96,7 +97,7 @@ main {
     &_image_2 {
         width: 24px;
         margin-inline: 15px;
-
+        
         @include tablet{
             height: 16px;
             width: 18px;
@@ -239,6 +240,11 @@ main {
     &_texto-explicativo{
         font-size: 14px;
         margin-block: 15px;
+    }
+    &_h4{
+        width: 600px;
+        font-weight: 500;
+        color: gray;
     }
 }
 
@@ -390,6 +396,8 @@ main {
         display: flex;
         gap: 10px;
         margin-bottom:40px ;
+        text-transform: uppercase;
+       
     }
 
     &_icon-black{
