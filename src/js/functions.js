@@ -4,6 +4,8 @@
 const productList = document.querySelector(".js_productList");
 const button = document.querySelector(".js_button");
 const buttonDelet = document.querySelector(".js_buttonDelet");
+const cardImage = document.querySelector(".js_cardImage");
+
 
 // ARRAY
 
@@ -27,28 +29,39 @@ buttonDelet.addEventListener("click", (ev) => {
 // Functions
 
 function createProduct() {
-  const imageUrl = document.getElementById("imageUpload").value;
+  const imageUrl = cardImage.getAttribute("src");
   const price = document.getElementById("number").value;
   const name = document.getElementById("nameProduct").value;
+  const number = ProductContainer.getAttribute("data-number");
+  const nameSeller = document.getElementById("nameVendor").value;
+  const telephone = document.getElementById("phone").value;
+  const emailContact = document.getElementById("email").value;
 
-  const product = {
-    id: Date.now(),
-    imageUrl: imageUrl,
-    price: price,
-    name: name,
+  
+
+
+  const data = {
+    field1: number,
+    field2: Date.now(),
+    field3: price,
+    field4: name,
+    field5: nameSeller,
+    field6:telephone,
+    field7:emailContact,
+    photo: imageUrl,
   };
 
-  arrayOfProducts.push(product);
+  arrayOfProducts.push(data);
   console.log(arrayOfProducts);
 }
 
 function renderOneProduct(objProduct) {
   return `<li class="container">
-                <span class="container_erase js_cardsEraser" data-id="${objProduct.id}">X</span>
-                <img src="${objProduct.imageUrl} class="container_img" 
-                alt="product image ${objProduct.name}"/>
-                <p class="container_price">${objProduct.price}</p>
-                <p class="container_name">${objProduct.name}</p>
+                <span class="container_erase js_cardsEraser" data-id="${objProduct.field2}">X</span>
+                <img src="${objProduct.photo}" class="container_img" 
+                alt="product image ${objProduct.field4}"/>
+                <p class="container_price">${objProduct.field3}</p>
+                <p class="container_name">${objProduct.field4}</p>
             </li>`;
 }
 
@@ -59,7 +72,7 @@ function renderAllProducts(arrayOfProducts) {
   }
   productList.innerHTML = html;
   attachClickEventsToEraserCards();
-  localStorage.setItem("products", JSON.stringify(arrayOfProducts));
+  localStorage.setItem("data", JSON.stringify(arrayOfProducts));
 }
 
 function attachClickEventsToEraserCards() {
@@ -72,13 +85,13 @@ function attachClickEventsToEraserCards() {
       /*Coge el atributo nuevo data-id como ancla para coger el objeto del arrayOfProducts y eliminarlo del arrayOfProducts */
       const idProduct = ev.currentTarget.getAttribute("data-id");
       const index = arrayOfProducts.findIndex(
-        (prod) => prod.id === parseInt(idProduct)
-      );
+        (prod) => prod.field2 === parseInt(idProduct)
+      );  
 
       /*Si el índice es distinto de -1, significa que el objeto se encontró en el arrayOfProducts y lo eliminamos */
       if (index !== -1) {
         arrayOfProducts.splice(index, 1);
-        localStorage.setItem("products", JSON.stringify(arrayOfProducts));
+        localStorage.setItem("data", JSON.stringify(arrayOfProducts));
         renderAllProducts(arrayOfProducts);
       }
     });
@@ -86,7 +99,7 @@ function attachClickEventsToEraserCards() {
 }
 
 function getProductsLocalstorage() {
-  const savedProducts = JSON.parse(localStorage.getItem("products"));
+  const savedProducts = JSON.parse(localStorage.getItem("data"));
 
   if (Array.isArray(savedProducts)) {
     arrayOfProducts = savedProducts;
@@ -98,7 +111,7 @@ function getProductsLocalstorage() {
 }
 
 function removeProductsLocalStorage() {
-  localStorage.removeItem("products");
+  localStorage.removeItem("data");
   arrayOfProducts = [];
 }
 
