@@ -107,3 +107,15 @@ const handlePhone = (ev) => {
   phonePreview.setAttribute('href', `tel:${telefono}`)
 };
 phoneInput.addEventListener('input', handlePhone);
+
+const buttonReset = document.querySelector(".js_button");
+
+buttonReset.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  inputPrice.value = '';  
+  inputProduct.value = ''; 
+  sellerName.value = '';
+  sellerEmail.value = '';
+  sellerPhone.value = '';
+  imgCard.src = '';
+});
