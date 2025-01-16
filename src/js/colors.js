@@ -19,25 +19,29 @@ let allColors = [
         color: "#90D10B",
         category: "Muebles",
         className: "container-green", 
-        textClassName: "categoryTextGreen", 
+        textClassName: "categoryTextGreen",
+        number: 1, 
     },
     {
         color: "#EB2A82",
         category: "Ropa",
         className: "container-pink",
         textClassName: "categoryTextPink",
+        number: 2,
     },
     {
         color: "#8547E8",
         category: "Informática",
         className: "container-purple",
         textClassName: "categoryTextPurple",
+        number: 3,
     },
     {
         color: "#FC9A7C",
         category: "Otros",
         className: "container-orange",
         textClassName: "categoryTextOrange",
+        number: 4,
     },
 
 ]
@@ -107,6 +111,9 @@ const handlerColourChange = (ev) => {
         ev.preventDefault();
         // Aplicar nuevas clases
         ProductContainer.classList.add(selectedColor.className);
+
+        ProductContainer.setAttribute("data-number", selectedColor.number);
+
         selectedLi.classList.add(selectedColor.textClassName);
         
         inputForm2.classList.add("display-2");

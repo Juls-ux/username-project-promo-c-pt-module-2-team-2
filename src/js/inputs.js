@@ -75,7 +75,7 @@ const handleInputProduct = (ev) => {
 inputProduct.addEventListener('input', handleInputProduct);
 
 
-const handleDeleteBtn = (ev) => {
+/*const handleDeleteBtn = (ev) => {
     ev.preventDefault();
 
     prodList = [];
@@ -83,5 +83,5 @@ const handleDeleteBtn = (ev) => {
     localStorage.removeItem('prodList');
 };
 
-deleteBtn.addEventListener('click', handleDeleteBtn)
+deleteBtn.addEventListener('click', handleDeleteBtn)*/
 
