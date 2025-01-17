@@ -5,38 +5,38 @@
 }
 
 main {
-   padding-inline: 30px;
-   padding-block: 50px;
-   background-color: rgba(0, 0, 0, 0.02);
-   background-image: linear-gradient(#8fd10b08, #eb2a8119);
+    padding-block: 40px;
+    background-color: rgba(0, 0, 0, 0.02);
+    background-image: linear-gradient(#8fd10b08, #eb2a8119);
 
-    @include tablet{
-       
+    @include tablet {
+
         display: grid;
         grid-template-columns: 60% 40%;
     }
-    @include desktop{
+
+    @include desktop {
         padding-inline: 150px;
     }
 }
 
 .section {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     text-align: center;
-   
+
     padding: 25px;
-    background-image:url(/src/images/oveja-negra.svg);
-   
-    @include tablet{
-    justify-content: left;
-    text-align: left;
+    background-image: url(/src/images/oveja-negra.svg);
+
+    @include tablet {
+        justify-content: left;
+        text-align: left;
     }
 
-    &_h2{
+    &_h2 {
         font-size: 20px;
-        color:#EB2A82;
-       
+        color: #EB2A82;
+
         align-items: center;
         text-align: center;
 
@@ -45,19 +45,20 @@ main {
         @include tablet {
             font-size: 30px;
             align-items: left;
-        text-align: left;
+            text-align: left;
 
         }
     }
-    &_text{
 
-        width: 500px;
+    &_text {
+
         font-size: 16px;
         margin-block: 30px;
+
         @include mobile {
-          
+
             font-size: 16px;
-           
+
             text-align: center;
         }
     }
@@ -66,28 +67,31 @@ main {
 .form {
     font-size: 14px;
     display: grid;
-    gap:10px;
-  
+    gap: 10px;
+
     @include mobile {
         place-items: center;
     }
 
 
-    @include tablet{
+    @include tablet {
         font-size: 16px;
         gap: 15px;
     }
-    @include desktop{
+
+    @include desktop {
         font-size: 18px;
         gap: 15px;
     }
+
     &_imgX {
         width: 30px;
     }
-    &_title{
+
+    &_title {
         margin-top: 50px;
         font-size: 14px;
-      text-transform: uppercase;
+        text-transform: uppercase;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -99,122 +103,134 @@ main {
             justify-content: left;
         }
     }
-    &_image_1, &_arrow {
-        
+
+    &_image_1,
+    &_arrow {
+
         width: 24px;
         margin-inline: 15px;
         color: #EB2A82;
-        
-        @include tablet{
-            height: 16px;
-            width: 18px;
-            margin-inline: 5px;
-        }
-        @include desktop{
-            height: 18px;
-            width: 20px;
-            margin-right: 10px;
-        }
-    }
-    &_image_2 {
-        width: 24px;
-        margin-inline: 15px;
-        
-        @include tablet{
+
+        @include tablet {
             height: 16px;
             width: 18px;
             margin-inline: 5px;
         }
 
-        @include desktop{
+        @include desktop {
             height: 18px;
             width: 20px;
             margin-right: 10px;
         }
     }
+
+    &_image_2 {
+        width: 24px;
+        margin-inline: 15px;
+
+        @include tablet {
+            height: 16px;
+            width: 18px;
+            margin-inline: 5px;
+        }
+
+        @include desktop {
+            height: 18px;
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+
     &_file {
         margin-top: 30px;
         height: 45px;
         width: 300px;
         background-color: #90D10B;
         color: white;
-        font-size:15px;
+        font-size: 15px;
         font-weight: 400;
         cursor: pointer;
         padding-block: 10px;
         text-align: center;
         margin-bottom: 35px;
 
-        @include tablet{
+        @include tablet {
             font-size: 16px;
         }
     }
+
     &_file_up {
         display: none;
     }
+
     &_input {
         font-size: 12px;
         height: 45px;
         width: 300px;
-        border: 0.6px solid; 
+        border: 0.6px solid;
         background-color: rgba(255, 255, 255, 0);
         margin-bottom: 18px;
         padding-inline: 15px;
 
-        @include tablet{
+        @include tablet {
             font-size: 14x;
 
             width: 350px;
         }
-        @include desktop{
+
+        @include desktop {
             font-size: 14px;
-          
+
             width: 430px;
         }
     }
+
     &_input::placeholder {
         color: #eb2a817b;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 300;
     }
+
     &_button {
         align-self: center;
-       
+
         color: white;
         border: none;
         height: 45px;
         width: 300px;
         font-size: 16px;
-        
+
     }
 
-    &_buttonSub{
+    &_buttonSub {
         align-self: center;
-        background-color:#EB2A82;
+        background-color: #EB2A82;
         color: white;
         border: none;
         height: 45px;
         width: 300px;
         font-size: 16px;
         margin-bottom: 50px;
-       
+
         align-items: center;
-        
+
         &:hover {
             background-color: #90D10B;
         }
     }
 
-   
+
     &_paragraph {
         font-size: 14px;
         margin-bottom: 45px;
         margin-top: 25px;
     }
+
     &_span {
         margin-inline: 5px;
-        color: rgb(240, 49, 183); 
+        color: rgb(240, 49, 183);
     }
+
     &_colors {
         display: flex;
         flex-direction: row;
@@ -223,14 +239,15 @@ main {
         align-items: center;
     }
 
-    &_colorsul{
+    &_colorsul {
         display: flex;
         flex-direction: row;
-        justify-content:flex-start;
+        justify-content: flex-start;
         gap: 15px;
         align-items: center;
         text-align: center;
         margin-bottom: 30px;
+
         @include tablet {
             gap: 40px;
         }
@@ -243,6 +260,7 @@ main {
         height: 45px;
         border-radius: 15px;
     }
+
     &_pink {
         background-color: #EB2A82;
         border: none;
@@ -250,6 +268,7 @@ main {
         height: 45px;
         border-radius: 15px;
     }
+
     &_purple {
         background-color: #8547E8;
         border: none;
@@ -257,6 +276,7 @@ main {
         height: 45px;
         border-radius: 15px;
     }
+
     &_orange {
         background-color: #FC9A7C;
         border: none;
@@ -264,25 +284,24 @@ main {
         height: 45px;
         border-radius: 15px;
     }
-    &_texto-explicativo{
+
+    &_texto-explicativo {
         font-size: 14px;
         margin-block: 15px;
-       
-        @include tablet{
 
-        }
+
     }
 
-    &_h4{
-        width: 400px;
+    &_h4 {
+
         font-weight: 500;
         color: gray;
         font-size: 16px;
 
         @include mobile {
-          
+
             font-size: 16px;
-            padding-inline:40px;
+
             text-align: center;
             padding-bottom: 20px;
         }
@@ -292,47 +311,53 @@ main {
 .container {
     align-items: center;
     padding: 15px;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 40px;
     box-shadow: 4px 4px 10px #3f3f3f5c;
     width: 100%;
     height: 100%;
-    @include tablet{
-            
-            padding-inline: 10px;
-            padding-block: 10px;
-            justify-content: right;
-            width: 500px;
-            height: 750px;
-        }
-        
-        @include desktop{
-            padding-inline: 30px;
-            padding-block: 30px;
-            justify-content: left;
-        }
+
+    @include tablet {
+
+        padding-inline: 10px;
+        padding-block: 10px;
+        justify-content: right;
+        width: 500px;
+        height: 750px;
+    }
+
+    @include desktop {
+        padding-inline: 30px;
+        padding-block: 30px;
+        justify-content: left;
+    }
+
     &_img {
         width: 150px;
         height: auto;
-        margin-bottom: 0px;   
+        margin-bottom: 0px;
+
         @include tablet {
             width: 350px;
             height: auto;
-            margin-bottom: 40px;  
-        }     
+            margin-bottom: 40px;
+        }
     }
-    &_img-2{
+
+    &_img-2 {
         width: 150px;
         height: 150px;
-        margin-bottom: 0px;   
+        margin-bottom: 0px;
+
         @include tablet {
             width: 150px;
             height: auto;
-            margin-bottom: 40px;  
-        }         
+            margin-bottom: 40px;
+        }
     }
-    &_erase{
-        background-color:#90D10B;
+
+    &_erase {
+        background-color: #90D10B;
         margin-block: 20px;
         color: white;
         padding-block: 5px;
@@ -340,15 +365,16 @@ main {
         border-radius: 5px;
     }
 
-    &_price{
+    &_price {
         font-size: 30px;
         color: #EB2A82;
         font-weight: 600;
         text-align: left;
         margin-top: 20px;
         margin-inline: 30px;
-        
+
     }
+
     &_name {
         font-size: 20px;
         font-weight: 600;
@@ -364,7 +390,7 @@ main {
         margin-top: 60px;
     }
 
-    &_icon-section{
+    &_icon-section {
         display: flex;
         flex-direction: row;
         gap: 25px;
@@ -377,72 +403,77 @@ main {
     background-color: #8fd10b51;
     box-shadow: 4px 4px 10px #49680a61;
     font-weight: 600;
-    
+
 
 }
 
 .container-pink {
-    background-color:#eb2a8152;
+    background-color: #eb2a8152;
     box-shadow: 4px 4px 10px #eb2a8152;
     font-weight: 600;
 }
 
 .container-purple {
-    background-color:#8547e85c;
+    background-color: #8547e85c;
     box-shadow: 4px 4px 10px #8547e85c;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 .container-orange {
-    background-color:#fc9a7c7f;
-    box-shadow: 4px 4px 10px #fc9a7c7f;;
+    background-color: #fc9a7c7f;
+    box-shadow: 4px 4px 10px #fc9a7c7f;
+    ;
     font-weight: 600;
-   
+
 }
 
-.categoryText{
+.categoryText {
     font-weight: 600;
 }
 
 .categoryTextGreen {
     color: #90D10B;
     font-size: 15.6px;
+
     @include tablet {
         font-size: 17px;
     }
 }
 
 .categoryTextPink {
-    color:#EB2A82;
+    color: #EB2A82;
     font-size: 15.6px;
+
     @include tablet {
         font-size: 17px;
     }
 }
 
 .categoryTextPurple {
-    color:#8547E8;
+    color: #8547E8;
     font-size: 15.6px;
+
     @include tablet {
         font-size: 17px;
     }
 }
 
 .categoryTextOrange {
-    color:#FC9A7C;
+    color: #FC9A7C;
     font-size: 15.6px;
+
     @include tablet {
         font-size: 17px;
     }
 }
- 
+
 .display {
     display: none;
 
 }
 
 .display-2 {
-    display:flex;
+    display: flex;
     flex-direction: column;
 
 }
@@ -469,16 +500,17 @@ main {
     margin-bottom: 25px;
     //border-top: 2px solid #EB2A82;
     width: 100%;
-    &_tus-productos{
+
+    &_tus-productos {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom:40px ;
+        margin-bottom: 40px;
         text-transform: uppercase;
-       
+
     }
 
-    &_icon-black{
+    &_icon-black {
         width: 60px;
 
     }
@@ -486,7 +518,8 @@ main {
 }
 
 
-.list_Product, .listProduct {
+.list_Product,
+.listProduct {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
@@ -495,27 +528,28 @@ main {
     gap: 40px;
 
 
-   @include tablet{
-        grid-template-columns: 1fr 1fr;
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    @include desktop{
+
+    @include desktop {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-.list_Delete{
+
+.list_Delete {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+
     margin-top: 30px;
-        background-color:#000000;
-        color: white;
-        border: none;
-        height: 45px;
-        width: 300px;
-        font-size: 16px;
-        margin-bottom: 50px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    margin-bottom: 50px;
+    align-items: center;
 
 }
 
@@ -525,39 +559,40 @@ main {
     flex-direction: column-reverse;
     align-items: center;
     padding: 15px;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 40px;
     box-shadow: 4px 4px 10px #3f3f3f5c;
     width: 300px;
     height: auto;
-    @include tablet{
-            
-            padding-inline: 10px;
-            padding-block: 10px;
-            justify-content: right;
-            width: 300px;
-            height: auto;
-        }
+
+    @include tablet {
+
+        padding-inline: 10px;
+        padding-block: 10px;
+        justify-content: right;
+        width: 300px;
+        height: auto;
+    }
 
 }
 
-.button-x{ 
+.button-x {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-self: center;
     text-decoration: none;
     gap: 15px;
-    background-color:#000000;
+    background-color: #000000;
     color: white;
     border: none;
     height: 45px;
     width: 300px;
     font-size: 16px;
     margin-bottom: 50px;
-   
+
     align-items: center;
-    
+
     &:hover {
         background-color: #90D10B;
     }
