@@ -500,6 +500,9 @@ main {
     margin-bottom: 25px;
     //border-top: 2px solid #EB2A82;
     width: 100%;
+    padding-inline: 30px;
+
+   
 
     &_tus-productos {
         display: flex;
@@ -523,8 +526,10 @@ main {
     }
 
     &_list-Delete {
-        
-        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         background-color: #000000;
         color: white;
         border: none;
