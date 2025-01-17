@@ -51,7 +51,7 @@ function createProduct() {
   const nameSeller = document.getElementById("nameVendor").value;
   const telephone = document.getElementById("phone").value;
   const emailContact = document.getElementById("email").value;
-  
+     
   const product = {
     field1: number,
     field2: Date.now(),
@@ -77,7 +77,7 @@ function renderOneProduct(objProduct) {
                 <span class="container_erase js_cardsEraser" data-id="${objProduct.field2}">X</span>
                 <img src="${objProduct.photo}" class="container_img-2" 
                 alt="product image ${objProduct.field4}"/>
-                <p class="container_price">${objProduct.field3}</p>
+                <p class="container_price">${Number(objProduct.field3).toFixed(2)}€</p>
                 <p class="container_name">${objProduct.field4}</p>
             </li>`;
 }
