@@ -7,7 +7,7 @@
 main {
     padding-block: 40px;
     background-color: rgba(0, 0, 0, 0.02);
-    background-image: linear-gradient(#8fd10b08, #eb2a8119);
+    background-image: linear-gradient(#8fd10b11, #ffffff19);
 
     @include tablet {
 
@@ -550,6 +550,9 @@ main {
     font-size: 16px;
     margin-bottom: 50px;
     align-items: center;
+    &:hover {
+        background-color: #90D10B;
+    }
 
 }
 
@@ -581,6 +584,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-self: center;
+    text-transform: uppercase;
     text-decoration: none;
     gap: 15px;
     background-color: #000000;
@@ -595,5 +599,26 @@ main {
 
     &:hover {
         background-color: #90D10B;
+    }
+}
+.button-adalab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    text-decoration: none;
+    gap: 15px;
+    background-color: #2f9f8d;
+    color: white;
+    border: none;
+    height: 45px;
+    width: auto;
+    font-size: 16px;
+    margin-bottom: 50px;
+
+    align-items: center;
+
+    &:hover {
+        background-color:  #144840;
     }
 }

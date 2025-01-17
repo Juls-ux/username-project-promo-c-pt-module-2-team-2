@@ -29,7 +29,7 @@ button.addEventListener("click", (ev) => {
   .then(response => response.json())  
   .then(responseData => {  
   console.log(responseData)
-  buttonXShare.innerHTML = `<a href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>  
+  buttonXShare.innerHTML = `<a class="button-adalab" href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>  
     <a class="shareButton button-x" href="https://twitter.com/intent/tweet?">Compartir en <img class="form_imgX" src="../images/X_Twitter_icon.svg"></a>`;
 
 });
