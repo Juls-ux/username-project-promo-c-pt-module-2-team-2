@@ -503,10 +503,17 @@ main {
 
     &_tus-productos {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         gap: 10px;
         margin-bottom: 40px;
         text-transform: uppercase;
+        @include tablet{
+            
+            align-items: left;
+            justify-content:start;
+        }
 
     }
 
@@ -515,6 +522,22 @@ main {
 
     }
 
+    &_list-Delete {
+        
+        margin-top: 30px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        height: 45px;
+        width: 300px;
+        font-size: 16px;
+        margin-bottom: 50px;
+
+        &:hover {
+            background-color: #90D10B;
+        }
+    
+    }
 }
 
 
@@ -537,24 +560,6 @@ main {
     }
 }
 
-.list_Delete {
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 30px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    height: 45px;
-    width: 300px;
-    font-size: 16px;
-    margin-bottom: 50px;
-    align-items: center;
-    &:hover {
-        background-color: #90D10B;
-    }
-
-}
 
 
 .container-list {
