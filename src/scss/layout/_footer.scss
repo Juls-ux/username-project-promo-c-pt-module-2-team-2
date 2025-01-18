@@ -1,8 +1,6 @@
 
   
 .footer {
- 
-    
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -10,15 +8,11 @@
     gap: 10px;
     padding-top: 20px;
     margin-bottom: 15px;
-   
     background-color: white;
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;   
-
- 
 
     &__logo-adalab {
         width: 120px;
@@ -27,6 +21,7 @@
     &__adacheap{
         font-size: 14px;
     }
+    
     @include tablet{
         flex-direction: row-reverse;
         justify-content: space-between;

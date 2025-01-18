@@ -7,7 +7,6 @@ const buttonDelet = document.querySelector(".js_buttonDelet");
 const cardImage = document.querySelector(".js_cardImage");
 const buttonXShare = document.querySelector(".js_buttonXShare");
 
-
 // ARRAY
 
 let arrayOfProducts = [];
@@ -20,19 +19,17 @@ button.addEventListener("click", (ev) => {
     const data = createProduct();
     createArrayOfProducts(data);
     renderAllProducts(arrayOfProducts);
-    fetch('https://dev.adalab.es/api/info/data', {
-  
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data),  
-})  
-  .then(response => response.json())  
-  .then(responseData => {  
-  console.log(responseData)
-  buttonXShare.innerHTML = `<a class="button-adalab" href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>  
-    <a class="shareButton button-x" href="https://twitter.com/intent/tweet?">Compartir en <img class="form_imgX" src="../images/X_Twitter_icon.svg"></a>`;
-
-});
+    fetch("https://dev.adalab.es/api/info/data", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((responseData) => {
+        console.log(responseData);
+        buttonXShare.innerHTML = `<a class="button-adalab" href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>  
+    <a class="shareButton button-x" href="https://twitter.com/intent/tweet?text=${responseData.infoID}">Compartir en <img class="form_imgX" src="../images/X_Twitter_icon.svg"></a>`;
+      });
   }
 });
 
@@ -51,33 +48,36 @@ function createProduct() {
   const nameSeller = document.getElementById("nameVendor").value;
   const telephone = document.getElementById("phone").value;
   const emailContact = document.getElementById("email").value;
-  
+
   const product = {
     field1: number,
     field2: Date.now(),
     field3: price,
     field4: name,
     field5: nameSeller,
-    field6:telephone,
-    field7:emailContact,
+    field6: telephone,
+    field7: emailContact,
     photo: imageUrl,
   };
 
-return product;
+  return product;
+}
 
-};
-  
-function createArrayOfProducts(product){
+function createArrayOfProducts(product) {
   arrayOfProducts.push(product);
   console.log(arrayOfProducts);
-};
+}
 
 function renderOneProduct(objProduct) {
   return `<li class="container-list">
-                <span class="container_erase js_cardsEraser" data-id="${objProduct.field2}">X</span>
+                <span class="container_erase js_cardsEraser" data-id="${
+                  objProduct.field2
+                }">X</span>
                 <img src="${objProduct.photo}" class="container_img-2" 
                 alt="product image ${objProduct.field4}"/>
-                <p class="container_price">${objProduct.field3}</p>
+                <p class="container_price">${Number(objProduct.field3).toFixed(
+                  2
+                )}€</p>
                 <p class="container_name">${objProduct.field4}</p>
             </li>`;
 }
@@ -103,7 +103,7 @@ function attachClickEventsToEraserCards() {
       const idProduct = ev.currentTarget.getAttribute("data-id");
       const index = arrayOfProducts.findIndex(
         (prod) => prod.field2 === parseInt(idProduct)
-      );  
+      );
 
       /*Si el índice es distinto de -1, significa que el objeto se encontró en el arrayOfProducts y lo eliminamos */
       if (index !== -1) {

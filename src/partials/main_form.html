@@ -44,7 +44,7 @@
           name="price"
           type="float"
           id="number"
-          placeholder="Ejem: 25,50€"
+          placeholder="Ejem: 25,00€"
           required
         />
         <label class="form_label" for="nameProduct"
@@ -129,16 +129,21 @@
       </section> 
     </form>
   </section>
-      
+
  
   <section class="section">
+  
     <div class="js_ProductContainer container" data-number="">
+      <input
+      class="js_buttonReset border_list-Reset"
+      type="button"
+      value="Borrar"/>
       <img
         class="js_cardImage container_img"
         src="../images/adalab-placeholder.svg"
         alt="Placeholder"
       />
-      <p class="js_cardPrice container_price">0,00€</p>
+      <p class="js_cardPrice container_price">0.00€</p>
       <p class="js_cardName container_name">Nombre del producto:</p>
       <p class="js_sellerName container_seller">Nombre del vendedor:</p>
 
