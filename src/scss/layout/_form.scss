@@ -25,7 +25,6 @@ main {
     justify-content: center;
     text-align: center;
     padding: 25px;
-    background-image: url(/src/images/oveja-negra.svg);
 
     @include tablet {
         justify-content: left;
