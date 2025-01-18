@@ -1,8 +1,8 @@
 "use strict";
 
-import "./collapsables";
-import "./colors";
+import "./collapsables.js";
+import "./colors.js";
 
-import "./functions";
-import "./inputs";
-import "./validator";
+import "./functions.js";
+import "./inputs.js";
+import "./validato.js";
