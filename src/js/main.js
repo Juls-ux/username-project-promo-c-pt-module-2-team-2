@@ -5,4 +5,4 @@ import "./colors.js";
 
 import "./functions.js";
 import "./inputs.js";
-import "./validato.js";
+import "./validator.js";

@@ -112,7 +112,7 @@ buttonReset.addEventListener("click", (ev) => {
   sellerPhone.value = "";
   imageUpload.value = "";
 
-  imgCard.src = "../images/adalab-placeholder.svg";
+  imgCard.src = "./assets/adalab-placeholder-162b15ca.svg";
   priceCard.innerHTML = "0.00€";
   nameCard.innerHTML = "Nombre del producto:";
   sellerNameCard.innerHTML = "Nombre del vendedor:";
