@@ -117,5 +117,16 @@ buttonReset.addEventListener("click", (ev) => {
   sellerName.value = '';
   sellerEmail.value = '';
   sellerPhone.value = '';
-  imgCard.src = '';
+  imageUpload.value = '';
+
+  imgCard.src = "../images/adalab-placeholder.svg";
+  priceCard.innerHTML = "0.00€";
+  nameCard.innerHTML = "Nombre del producto:";
+  sellerNameCard.innerHTML = "Nombre del vendedor:";
+  emailPreview.setAttribute('href', 'mailto:correo@example.com');
+  phonePreview.setAttribute('href', 'tel:123456789');
+
+  const productContainer = document.querySelector('.js_ProductContainer');
+  productContainer.style.backgroundColor = '';
+  productContainer.classList.remove('container-green', 'container-pink', 'container-purple', 'container-orange');
 });
